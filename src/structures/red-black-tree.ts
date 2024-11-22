@@ -203,8 +203,8 @@ export class RedBlackTree {
             return true;
         }
 
-        let node = this.addNode(this.root, key);
-        let childDirection = this.compareKeyDirection(node.key, node.parent!.key);
+        let node: Node = this.addNode(this.root, key);
+        let childDirection: KeyDirection = this.compareKeyDirection(node.key, node.parent!.key);
         node = node.parent!;
 
         let addCase: NodeCase;
@@ -278,9 +278,9 @@ export class RedBlackTree {
         } else if (!node.parent) {
             return NodeCase.FOUR;
         } else {
-            const grandParent = node.parent;
-            const parentDirection = this.compareKeyDirection(node.key, node.parent!.key);
-            const uncle = parentDirection === KeyDirection.Left ? grandParent.right : grandParent.left;
+            const grandParent: Node = node.parent;
+            const parentDirection: KeyDirection = this.compareKeyDirection(node.key, node.parent!.key);
+            const uncle: Node | null = parentDirection === KeyDirection.Left ? grandParent.right : grandParent.left;
 
             if (!uncle || uncle.color === Color.Black) {
                 return NodeCase.FIVE_AND_SIX;
@@ -291,9 +291,9 @@ export class RedBlackTree {
     }
 
     private addCaseTwo(node: Node): Node | null {
-        const grandParent = node.parent!;
-        const parentDirection = this.compareKeyDirection(node.key, node.parent!.key);
-        const uncle = parentDirection === KeyDirection.Left ? grandParent.right! : grandParent.left!;
+        const grandParent: Node = node.parent!;
+        const parentDirection: KeyDirection = this.compareKeyDirection(node.key, node.parent!.key);
+        const uncle: Node = parentDirection === KeyDirection.Left ? grandParent.right! : grandParent.left!;
 
         node.color = Color.Black;
         uncle.color = Color.Black;
@@ -397,7 +397,7 @@ export class RedBlackTree {
             return false;
         }
 
-        let node = this.removeNode(this.root, key);
+        let node: Node = this.removeNode(this.root, key);
         node = this.removeSimpleCases(node)!;
 
         if (!node) {
@@ -415,7 +415,7 @@ export class RedBlackTree {
 
     private removeNode(node: Node, key: string): Node {
         while (true) {
-            const direction = this.compareKeyDirection(key, node.key);
+            const direction: KeyDirection = this.compareKeyDirection(key, node.key);
 
             if (direction === KeyDirection.Left) {
                 node = node.left!;
@@ -430,11 +430,11 @@ export class RedBlackTree {
     }
 
     private getRemoveCase(node: Node): NodeCase {
-        const direction = this.compareKeyDirection(node.key, node.parent!.key);
+        const direction: KeyDirection = this.compareKeyDirection(node.key, node.parent!.key);
 
-        const sibling = direction === KeyDirection.Left ? node.parent!.right! : node.parent!.left!;
-        const closeNephew = direction === KeyDirection.Left ? sibling.left! : sibling.right!;
-        const farNephew = direction === KeyDirection.Left ? sibling.right! : sibling.left!;
+        const sibling: Node = direction === KeyDirection.Left ? node.parent!.right! : node.parent!.left!;
+        const closeNephew: Node = direction === KeyDirection.Left ? sibling.left! : sibling.right!;
+        const farNephew: Node = direction === KeyDirection.Left ? sibling.right! : sibling.left!;
 
         if (sibling.color == Color.Red) {
             return NodeCase.THREE;
@@ -457,7 +457,7 @@ export class RedBlackTree {
         }
 
         if (node.left && node.right) {
-            const successor = this.getMin(node.right!);
+            const successor: Node = this.getMin(node.right!);
             node.key = successor.key;
             node = successor;
         }
@@ -480,7 +480,7 @@ export class RedBlackTree {
     }
 
     private removeBlackNode(node: Node): Node | null {
-        const child = node.left ?? node.right;
+        const child: Node | null = node.left ?? node.right;
 
         if (!child) {
             return node;
@@ -489,7 +489,7 @@ export class RedBlackTree {
         child.color = Color.Black;
         child.parent = node.parent;
 
-        const childDirection = !node.parent ? KeyDirection.Middle : this.compareKeyDirection(node.key, node.parent!.key);
+        const childDirection: KeyDirection = !node.parent ? KeyDirection.Middle : this.compareKeyDirection(node.key, node.parent!.key);
 
         this.transplant(node.parent!, child, childDirection);
 
@@ -497,13 +497,13 @@ export class RedBlackTree {
     }
 
     private removeColor(node: Node): Node | null {
-        const removeCase = this.getRemoveCase(node);
+        const removeCase: NodeCase = this.getRemoveCase(node);
 
-        const direction = this.compareKeyDirection(node.key, node.parent!.key);
+        const direction: KeyDirection = this.compareKeyDirection(node.key, node.parent!.key);
 
-        const sibling = direction === KeyDirection.Left ? node.parent!.right! : node.parent!.left!;
-        const closeNephew = direction === KeyDirection.Left ? sibling.left! : sibling.right!;
-        const farNephew = direction === KeyDirection.Left ? sibling.right! : sibling.left!;
+        const sibling: Node = direction === KeyDirection.Left ? node.parent!.right! : node.parent!.left!;
+        const closeNephew: Node = direction === KeyDirection.Left ? sibling.left! : sibling.right!;
+        const farNephew: Node = direction === KeyDirection.Left ? sibling.right! : sibling.left!;
 
         switch (removeCase) {
             case NodeCase.ONE:
@@ -536,7 +536,7 @@ export class RedBlackTree {
     }
 
     private removeCase3(node: Node, closeNephew: Node, childDirection: KeyDirection): void {
-        let sibling = childDirection == KeyDirection.Left ? this.rotateLeft(node.parent!) : this.rotateRight(node.parent!);
+        let sibling: Node = childDirection == KeyDirection.Left ? this.rotateLeft(node.parent!) : this.rotateRight(node.parent!);
 
         sibling.color = Color.Black;
 
@@ -548,8 +548,7 @@ export class RedBlackTree {
 
         sibling = closeNephew!;
 
-        const farNephew = childDirection === KeyDirection.Left ? sibling.right! : sibling.left!;
-
+        const farNephew: Node = childDirection === KeyDirection.Left ? sibling.right! : sibling.left!;
         if (farNephew && farNephew.color == Color.Red) {
             this.removeCase6(node, farNephew, childDirection);
 
@@ -573,7 +572,7 @@ export class RedBlackTree {
 
     private removeCase5(node: Node, sibling: Node, childDirection: KeyDirection): void {
         sibling = childDirection == KeyDirection.Left ? this.rotateRight(sibling) : this.rotateLeft(sibling);
-        const farNephew = childDirection === KeyDirection.Left ? sibling.right! : sibling.left!;
+        const farNephew: Node = childDirection === KeyDirection.Left ? sibling.right! : sibling.left!;
 
         sibling.color = Color.Black;
         farNephew.color = Color.Red;
@@ -582,7 +581,7 @@ export class RedBlackTree {
     }
 
     private removeCase6(node: Node, farNephew: Node, childDirection: KeyDirection): void {
-        const oldParent = node.parent!;
+        const oldParent: Node = node.parent!;
         node = childDirection == KeyDirection.Left ? this.rotateLeft(oldParent) : this.rotateRight(oldParent);
 
         node.color = oldParent.color;
