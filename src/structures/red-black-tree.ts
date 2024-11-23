@@ -21,13 +21,20 @@ export enum NodeCase {
 
 export class Node {
     private _key: string;
+    private _description: string;
+    private _keyTranslated: string;
+    private _descriptionTranslated: string;
+    private _gimmick: void | null = null;
     private _color: Color;
     private _parent: Node | null = null;
     private _left: Node | null = null;
     private _right: Node | null = null;
 
-    public constructor(key: string, color: Color, parent: Node | null) {
+    public constructor(key: string, description: string, keyTranslated: string, descriptionTranslated: string, color: Color, parent: Node | null) {
         this._key = key;
+        this._description = description;
+        this._keyTranslated = keyTranslated;
+        this._descriptionTranslated = descriptionTranslated;
         this._color = color;
         this._parent = parent;
     }
@@ -38,6 +45,34 @@ export class Node {
 
     public set key(value: string) {
         this._key = value;
+    }
+
+    public get description(): string {
+        return this._description;
+    }
+
+    public set description(value: string) {
+        this._description = value;
+    }
+
+    public get keyTranslated(): string {
+        return this._keyTranslated;
+    }
+
+    public set keyTranslated(value: string){
+        this._keyTranslated = value;
+    }
+
+    public get descriptionTranslated(): string {
+        return this._descriptionTranslated;
+    }
+
+    public set descriptionTranslated(value: string) {
+        this._descriptionTranslated = value;
+    }
+
+    public get gimmick(): void | null {
+        return this._gimmick;
     }
 
     public get color(): Color {
@@ -192,18 +227,18 @@ export class RedBlackTree {
         return this.isExistRecursively(currentNode.right, key);
     }
 
-    public add(key: string): boolean {
+    public add(key: string, description: string, keyTranslated: string, descriptionTranslated: string): boolean {
         if (this.isExist(key)) {
             return false;
         }
 
         if (this.root === null) {
-            this.root = new Node(key, Color.Black, null);
+            this.root = new Node(key, description, keyTranslated, descriptionTranslated, Color.Black, null);
 
             return true;
         }
 
-        let node: Node = this.addNode(this.root, key);
+        let node: Node = this.addNode(this.root, key, description, keyTranslated, descriptionTranslated);
         let childDirection: KeyDirection = this.compareKeyDirection(node.key, node.parent!.key);
         node = node.parent!;
 
@@ -244,13 +279,13 @@ export class RedBlackTree {
         return true;
     }
 
-    private addNode(node: Node, key: string): Node {
+    private addNode(node: Node, key: string, description: string, keyTranslated: string, descriptionTranslated: string): Node {
         let newNode: Node;
 
         while (true) {
             if (this.compareKeyDirection(key, node.key) === KeyDirection.Left) {
                 if (!node.left) {
-                    newNode = new Node(key, Color.Red, node);
+                    newNode = new Node(key, description, keyTranslated, descriptionTranslated, Color.Red, node);
                     node.left = newNode;
 
                     break;
@@ -259,7 +294,7 @@ export class RedBlackTree {
                 }
             } else {
                 if (!node.right) {
-                    newNode = new Node(key, Color.Red, node);
+                    newNode = new Node(key, description, keyTranslated, descriptionTranslated, Color.Red, node);
                     node.right = newNode;
 
                     break;
