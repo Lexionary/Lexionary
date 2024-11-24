@@ -111,6 +111,10 @@ export class Node {
     public set right(node: Node | null) {
         this._right = node;
     }
+
+    public toString(): string {
+        return `Node(\nkey:\n${this.key}\n\ndescription:\n${this.description}\n\nkeyTranslated:\n${this.keyTranslated}\n\ndescriptionTranslated:\n${this.descriptionTranslated}\n)`;
+    }
 }
 
 export class RedBlackTree {
