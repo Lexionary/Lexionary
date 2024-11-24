@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { RedBlackTree } from "./structures/red-black-tree";
+import { computed, ref, type ComputedRef, type Ref } from "vue";
+
+import { RedBlackTree, Node } from "./structures/red-black-tree";
 
 interface RawDictionaryDataInterface {
     keyEn: string;
@@ -728,13 +730,29 @@ RAW_DICTIONARY_DATA.forEach((rawDictionaryData: RawDictionaryDataInterface): voi
 // console.log("\n");
 // console.log("\n");
 
-EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Test");
-EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Air");
-EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Testing");
-EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Aircraft Carrier");
-EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Airplane");
-EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Shrimp");
-EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Chocolate");
+// EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Test");
+// EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Air");
+// EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Testing");
+// EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Aircraft Carrier");
+// EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Airplane");
+// EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Shrimp");
+// EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Chocolate");
+
+const searchQuery: Ref<string, string> = ref("");
+const result: ComputedRef<Node[]> = computed((): Node[] => EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity(searchQuery.value));
 </script>
 
-<template>Test</template>
+<template>
+    <div>
+        <h1>Search By Relevance</h1>
+
+        <input type="text" v-model="searchQuery" placeholder="Search..." class="search-bar" />
+
+        <ul>
+            <div v-for="item in result" :key="item.key">
+                <li style="white-space: pre">{{ item.toString() }}</li>
+                <br />
+            </div>
+        </ul>
+    </div>
+</template>
