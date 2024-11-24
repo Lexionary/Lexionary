@@ -24,13 +24,13 @@ export class Node {
     private _description: string;
     private _keyTranslated: string;
     private _descriptionTranslated: string;
-    private _gimmick: void | null = null;
+    private _gimmick: (()=> void) | null;
     private _color: Color;
     private _parent: Node | null = null;
     private _left: Node | null = null;
     private _right: Node | null = null;
 
-    public constructor(key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: void | null, color: Color, parent: Node | null) {
+    public constructor(key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: (() => void) | null, color: Color, parent: Node | null) {
         this._key = key;
         this._description = description;
         this._keyTranslated = keyTranslated;
@@ -72,7 +72,7 @@ export class Node {
         this._descriptionTranslated = value;
     }
 
-    public get gimmick(): void | null {
+    public get gimmick(): (() => void) | null {
         return this._gimmick;
     }
 
@@ -228,7 +228,7 @@ export class RedBlackTree {
         return this.isExistRecursively(currentNode.right, key);
     }
 
-    public add(key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: void | null): boolean {
+    public add(key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: (()=> void) | null): boolean {
         if (this.isExist(key)) {
             return false;
         }
@@ -239,7 +239,7 @@ export class RedBlackTree {
             return true;
         }
 
-        let node: Node = this.addNode(this.root, key, description, keyTranslated, descriptionTranslated);
+        let node: Node = this.addNode(this.root, key, description, keyTranslated, descriptionTranslated, gimmick);
         let childDirection: KeyDirection = this.compareKeyDirection(node.key, node.parent!.key);
         node = node.parent!;
 
@@ -280,7 +280,7 @@ export class RedBlackTree {
         return true;
     }
 
-    private addNode(node: Node, key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: void | null): Node {
+    private addNode(node: Node, key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: (()=> void) | null): Node {
         let newNode: Node;
 
         while (true) {
