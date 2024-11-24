@@ -689,45 +689,52 @@ const RAW_DICTIONARY_DATA: RawDictionaryDataInterface[] = [
         descriptionIn: "Hidangan fillet ikan goreng yang disajikan dengan irisan kentang goreng",
         gimmick: null,
     },
+    {
+        keyEn: "Test Chocolate",
+        descriptionEn: "Test Chocolate",
+        keyIn: "Test Chocolate",
+        descriptionIn: "Test Chocolate",
+        gimmick: null,
+    },
 ];
 
 const EN_TO_IN_RED_BLACK_TREE: RedBlackTree = new RedBlackTree();
 const IN_TO_EN_RED_BLACK_TREE: RedBlackTree = new RedBlackTree();
 
 RAW_DICTIONARY_DATA.forEach((rawDictionaryData: RawDictionaryDataInterface): void => {
-    console.log(
-        EN_TO_IN_RED_BLACK_TREE.add(rawDictionaryData.keyEn, rawDictionaryData.descriptionEn, rawDictionaryData.keyIn, rawDictionaryData.descriptionIn, rawDictionaryData.gimmick),
-        rawDictionaryData.keyEn
-    );
+    // console.log(
+    EN_TO_IN_RED_BLACK_TREE.add(rawDictionaryData.keyEn, rawDictionaryData.descriptionEn, rawDictionaryData.keyIn, rawDictionaryData.descriptionIn, rawDictionaryData.gimmick);
+    // , rawDictionaryData.keyEn
+    // );
 
-    console.log(
-        IN_TO_EN_RED_BLACK_TREE.add(rawDictionaryData.keyIn, rawDictionaryData.descriptionIn, rawDictionaryData.keyEn, rawDictionaryData.descriptionEn, rawDictionaryData.gimmick),
-        rawDictionaryData.keyIn
-    );
+    // console.log(
+    IN_TO_EN_RED_BLACK_TREE.add(rawDictionaryData.keyIn, rawDictionaryData.descriptionIn, rawDictionaryData.keyEn, rawDictionaryData.descriptionEn, rawDictionaryData.gimmick);
+    // , rawDictionaryData.keyIn
+    // );
 });
 
-console.log(EN_TO_IN_RED_BLACK_TREE.getTotal());
-console.log(EN_TO_IN_RED_BLACK_TREE.getPreOrder());
-console.log(EN_TO_IN_RED_BLACK_TREE.getInOrder());
-console.log(EN_TO_IN_RED_BLACK_TREE.getPostOrder());
-console.log(EN_TO_IN_RED_BLACK_TREE.root!.toString());
-console.log("\n");
-console.log(IN_TO_EN_RED_BLACK_TREE.getTotal());
-console.log(IN_TO_EN_RED_BLACK_TREE.getPreOrder());
-console.log(IN_TO_EN_RED_BLACK_TREE.getInOrder());
-console.log(IN_TO_EN_RED_BLACK_TREE.getPostOrder());
-console.log(IN_TO_EN_RED_BLACK_TREE.root!.toString());
-console.log("\n");
-console.log("\n");
-console.log("\n");
+// console.log(EN_TO_IN_RED_BLACK_TREE.getTotal());
+// console.log(EN_TO_IN_RED_BLACK_TREE.getPreOrder());
+// console.log(EN_TO_IN_RED_BLACK_TREE.getInOrder());
+// console.log(EN_TO_IN_RED_BLACK_TREE.getPostOrder());
+// console.log(EN_TO_IN_RED_BLACK_TREE.root!.toString());
+// console.log("\n");
+// console.log(IN_TO_EN_RED_BLACK_TREE.getTotal());
+// console.log(IN_TO_EN_RED_BLACK_TREE.getPreOrder());
+// console.log(IN_TO_EN_RED_BLACK_TREE.getInOrder());
+// console.log(IN_TO_EN_RED_BLACK_TREE.getPostOrder());
+// console.log(IN_TO_EN_RED_BLACK_TREE.root!.toString());
+// console.log("\n");
+// console.log("\n");
+// console.log("\n");
 
-console.log(EN_TO_IN_RED_BLACK_TREE.getNodesByKey("Test"));
-console.log(EN_TO_IN_RED_BLACK_TREE.getNodesByKey("Air"));
-console.log(EN_TO_IN_RED_BLACK_TREE.getNodesByKey("Testing"));
-console.log(EN_TO_IN_RED_BLACK_TREE.getNodesByKey("Aircraft Carrier"));
-console.log(EN_TO_IN_RED_BLACK_TREE.getNodesByKey("Airplane"));
-console.log(EN_TO_IN_RED_BLACK_TREE.getNodesByKey("Shrimp"));
-console.log(EN_TO_IN_RED_BLACK_TREE.getNodesByKey("Chocolate"));
+console.log(EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Test"));
+console.log(EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Air"));
+console.log(EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Testing"));
+console.log(EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Aircraft Carrier"));
+console.log(EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Airplane"));
+console.log(EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Shrimp"));
+console.log(EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Chocolate"));
 </script>
 
 <template>Test</template>

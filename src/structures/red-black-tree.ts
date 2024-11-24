@@ -255,6 +255,53 @@ export class RedBlackTree {
         }
     }
 
+    public getNodesBySimiliarity(key: string) {
+        const tokenizeKey = (value: string): string[] => {
+            return value
+                .toLowerCase()
+                .replace(/[^a-z0-9_\s]/g, "")
+                .split(/\s+/g);
+        };
+
+        const removeSuffixFromKey = (value: string): string => {
+            return value.replace(/(ing|s)$/, "");
+        };
+
+        const removeDuplicateFromArray = (array: string[]): string[] => {
+            return Array.from(new Set(array));
+        };
+
+        const getKeyWords = (value: string): string[] => {
+            const tokenizedKeys: string[] = tokenizeKey(value);
+
+            const noSuffixKeys: string[] = tokenizedKeys.map((tokenizedKey: string): string => removeSuffixFromKey(tokenizedKey));
+
+            const combinedKeys: string[] = [value.toLowerCase()].concat(noSuffixKeys);
+
+            const uniqueKeys: string[] = removeDuplicateFromArray(combinedKeys);
+
+            return uniqueKeys;
+        };
+
+        const keyWords: string[] = getKeyWords(key);
+
+        console.log(keyWords);
+
+        const similiarNodes: Node[] = [];
+        
+        keyWords.forEach((keyWord: string): void => {
+            const similiarNodesByKey: Node[] = this.getNodesByKey(keyWord);
+
+            similiarNodesByKey.forEach((node: Node): void => {
+                if (similiarNodes.includes(node) === false) {
+                    similiarNodes.push(node);
+                }
+            });
+        });
+
+        return similiarNodes;
+    }
+
     public isExist(key: string): boolean {
         return this.isExistRecursively(this.root, key);
     }
