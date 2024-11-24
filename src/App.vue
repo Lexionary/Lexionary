@@ -549,6 +549,146 @@ const RAW_DICTIONARY_DATA: RawDictionaryDataInterface[] = [
         descriptionIn: "Burung Dunia Lama kecil yang mirip dengan burung finch yang berkerabat dengan burung penenun, biasanya dengan bulu coklat dan abu-abu",
         gimmick: null,
     },
+    {
+        keyEn: "Ice Cream Cone",
+        descriptionEn: "A cone-shaped container made of a wafer, used to hold ice cream",
+        keyIn: "Kerucut Es Krim",
+        descriptionIn: "Wadah berbentuk kerucut yang terbuat dari wafer, digunakan untuk menampung es krim",
+        gimmick: null,
+    },
+    {
+        keyEn: "Chocolate Chip Cookie",
+        descriptionEn: "A cookie containing small pieces of chocolate",
+        keyIn: "Kue Cokelat Chip",
+        descriptionIn: "Kue yang mengandung potongan kecil cokelat",
+        gimmick: null,
+    },
+    {
+        keyEn: "Peanut Butter Sandwich",
+        descriptionEn: "A sandwich made with peanut butter spread between two slices of bread",
+        keyIn: "Sandwich Selai Kacang",
+        descriptionIn: "Sandwich yang dibuat dengan selai kacang di antara dua irisan roti",
+        gimmick: null,
+    },
+    {
+        keyEn: "Grilled Cheese Sandwich",
+        descriptionEn: "A sandwich made with cheese and grilled until the bread is toasted and the cheese is melted",
+        keyIn: "Sandwich Keju Panggang",
+        descriptionIn: "Sandwich yang dibuat dengan keju dan dipanggang sampai roti dipanggang dan keju meleleh",
+        gimmick: null,
+    },
+    {
+        keyEn: "French Fries",
+        descriptionEn: "Strips of deep-fried potato",
+        keyIn: "Kentang Goreng",
+        descriptionIn: "Irisan kentang yang digoreng",
+        gimmick: null,
+    },
+    {
+        keyEn: "Chocolate Cake",
+        descriptionEn: "A cake made with chocolate or cocoa powder",
+        keyIn: "Kue Cokelat",
+        descriptionIn: "Kue yang dibuat dengan cokelat atau bubuk kakao",
+        gimmick: null,
+    },
+    {
+        keyEn: "Spaghetti Carbonara",
+        descriptionEn: "An Italian pasta dish made with eggs, cheese, pancetta, and pepper",
+        keyIn: "Spaghetti Carbonara",
+        descriptionIn: "Hidangan pasta Italia yang dibuat dengan telur, keju, pancetta, dan lada",
+        gimmick: null,
+    },
+    {
+        keyEn: "Chicken Noodle Soup",
+        descriptionEn: "A soup made with chicken, noodles, and vegetables",
+        keyIn: "Sup Ayam Mie",
+        descriptionIn: "Sup yang dibuat dengan ayam, mie, dan sayuran",
+        gimmick: null,
+    },
+    {
+        keyEn: "Caesar Salad",
+        descriptionEn: "A salad made with romaine lettuce, croutons, Parmesan cheese, and Caesar dressing",
+        keyIn: "Salad Caesar",
+        descriptionIn: "Salad yang dibuat dengan selada romaine, crouton, keju Parmesan, dan saus Caesar",
+        gimmick: null,
+    },
+    {
+        keyEn: "Mashed Potatoes",
+        descriptionEn: "Potatoes that have been boiled and then mashed with milk, butter, and seasoning",
+        keyIn: "Kentang Tumbuk",
+        descriptionIn: "Kentang yang telah direbus dan kemudian ditumbuk dengan susu, mentega, dan bumbu",
+        gimmick: null,
+    },
+    {
+        keyEn: "Chocolate Milkshake",
+        descriptionEn: "A cold beverage made with milk, chocolate syrup, and ice cream",
+        keyIn: "Milkshake Cokelat",
+        descriptionIn: "Minuman dingin yang dibuat dengan susu, sirup cokelat, dan es krim",
+        gimmick: null,
+    },
+    {
+        keyEn: "Blueberry Muffin",
+        descriptionEn: "A small cake made with blueberries and baked in a cup-shaped mold",
+        keyIn: "Muffin Blueberry",
+        descriptionIn: "Kue kecil yang dibuat dengan blueberry dan dipanggang dalam cetakan berbentuk cangkir",
+        gimmick: null,
+    },
+    {
+        keyEn: "Vegetable Stir Fry",
+        descriptionEn: "A dish made by frying vegetables quickly over high heat",
+        keyIn: "Tumis Sayuran",
+        descriptionIn: "Hidangan yang dibuat dengan menggoreng sayuran dengan cepat di atas api besar",
+        gimmick: null,
+    },
+    {
+        keyEn: "Beef Tacos",
+        descriptionEn: "A Mexican dish consisting of a folded or rolled tortilla filled with beef and other ingredients",
+        keyIn: "Taco Daging Sapi",
+        descriptionIn: "Hidangan Meksiko yang terdiri dari tortilla yang dilipat atau digulung diisi dengan daging sapi dan bahan lainnya",
+        gimmick: null,
+    },
+    {
+        keyEn: "Pineapple Pizza",
+        descriptionEn: "A pizza topped with pineapple chunks and other ingredients",
+        keyIn: "Pizza Nanas",
+        descriptionIn: "Pizza yang diberi potongan nanas dan bahan lainnya",
+        gimmick: null,
+    },
+    {
+        keyEn: "Shrimp Fried Rice",
+        descriptionEn: "A dish made with rice, shrimp, and vegetables, stir-fried together",
+        keyIn: "Nasi Goreng Udang",
+        descriptionIn: "Hidangan yang dibuat dengan nasi, udang, dan sayuran, ditumis bersama",
+        gimmick: null,
+    },
+    {
+        keyEn: "Beef Stroganoff",
+        descriptionEn: "A Russian dish of sautéed pieces of beef served in a sauce with sour cream",
+        keyIn: "Beef Stroganoff",
+        descriptionIn: "Hidangan Rusia dari potongan daging sapi yang ditumis disajikan dalam saus dengan krim asam",
+        gimmick: null,
+    },
+    {
+        keyEn: "Chicken Parmesan",
+        descriptionEn: "A dish made with breaded chicken breast covered in tomato sauce and mozzarella cheese",
+        keyIn: "Ayam Parmesan",
+        descriptionIn: "Hidangan yang dibuat dengan dada ayam berlapis tepung roti yang ditutupi saus tomat dan keju mozzarella",
+        gimmick: null,
+    },
+    {
+        keyEn: "Garlic Bread",
+        descriptionEn: "Bread topped with garlic and olive oil or butter and baked",
+        keyIn: "Roti Bawang Putih",
+        descriptionIn: "Roti yang diberi bawang putih dan minyak zaitun atau mentega dan dipanggang",
+        gimmick: null,
+    },
+    {
+        keyEn: "Fish and Chips",
+        descriptionEn: "A dish of fried fish fillets served with deep-fried potato strips",
+        keyIn: "Ikan dan Kentang Goreng",
+        descriptionIn: "Hidangan fillet ikan goreng yang disajikan dengan irisan kentang goreng",
+        gimmick: null,
+    },
 ];
 
 const EN_TO_IN_RED_BLACK_TREE: RedBlackTree = new RedBlackTree();
@@ -577,6 +717,17 @@ console.log(IN_TO_EN_RED_BLACK_TREE.getPreOrder());
 console.log(IN_TO_EN_RED_BLACK_TREE.getInOrder());
 console.log(IN_TO_EN_RED_BLACK_TREE.getPostOrder());
 console.log(IN_TO_EN_RED_BLACK_TREE.root!.toString());
+console.log("\n");
+console.log("\n");
+console.log("\n");
+
+console.log(EN_TO_IN_RED_BLACK_TREE.getNodesByKey("Test"));
+console.log(EN_TO_IN_RED_BLACK_TREE.getNodesByKey("Air"));
+console.log(EN_TO_IN_RED_BLACK_TREE.getNodesByKey("Testing"));
+console.log(EN_TO_IN_RED_BLACK_TREE.getNodesByKey("Aircraft Carrier"));
+console.log(EN_TO_IN_RED_BLACK_TREE.getNodesByKey("Airplane"));
+console.log(EN_TO_IN_RED_BLACK_TREE.getNodesByKey("Shrimp"));
+console.log(EN_TO_IN_RED_BLACK_TREE.getNodesByKey("Chocolate"));
 </script>
 
 <template>Test</template>

@@ -216,6 +216,45 @@ export class RedBlackTree {
         }
     }
 
+    public getNodeByKey(key: string): Node | null {
+        return this.getNodeByKeyRecursively(this.root, key);
+    }
+
+    private getNodeByKeyRecursively(currentNode: Node | null, key: string): Node | null {
+        if (currentNode === null) {
+            return null;
+        }
+
+        if (key.toLowerCase() == currentNode.key.toLowerCase()) {
+            return currentNode;
+        }
+
+        if (key.toLowerCase() < currentNode.key.toLowerCase()) {
+            return this.getNodeByKeyRecursively(currentNode.left, key);
+        }
+
+        return this.getNodeByKeyRecursively(currentNode.right, key);
+    }
+
+    public getNodesByKey(key: string): Node[] {
+        const result: Node[] = [];
+
+        this.getNodesByKeyRecursively(this.root, key, result);
+
+        return result;
+    }
+
+    private getNodesByKeyRecursively(currentNode: Node | null, key: string, result: Node[]): void {
+        if (currentNode !== null) {
+            if (currentNode.key.toLowerCase().includes(key.toLowerCase())) {
+                result.push(currentNode);
+            }
+
+            this.getNodesByKeyRecursively(currentNode.left, key, result);
+            this.getNodesByKeyRecursively(currentNode.right, key, result);
+        }
+    }
+
     public isExist(key: string): boolean {
         return this.isExistRecursively(this.root, key);
     }
