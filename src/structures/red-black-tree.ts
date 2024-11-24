@@ -24,7 +24,7 @@ export class Node {
     private _description: string;
     private _keyTranslated: string;
     private _descriptionTranslated: string;
-    private _gimmick: (()=> void) | null;
+    private _gimmick: (() => void) | null;
     private _color: Color;
     private _parent: Node | null = null;
     private _left: Node | null = null;
@@ -60,7 +60,7 @@ export class Node {
         return this._keyTranslated;
     }
 
-    public set keyTranslated(value: string){
+    public set keyTranslated(value: string) {
         this._keyTranslated = value;
     }
 
@@ -74,6 +74,10 @@ export class Node {
 
     public get gimmick(): (() => void) | null {
         return this._gimmick;
+    }
+
+    public set gimmick(value: (() => void) | null) {
+        this._gimmick = value;
     }
 
     public get color(): Color {
@@ -144,7 +148,7 @@ export class RedBlackTree {
         return 1 + this.getTotalRecursively(currentNode.left) + this.getTotalRecursively(currentNode.right);
     }
 
-    private getMin(node: Node): Node {
+    private getMinimum(node: Node): Node {
         while (node.left) {
             node = node.left;
         }
@@ -152,7 +156,7 @@ export class RedBlackTree {
         return node;
     }
 
-    private getMax(node: Node): Node {
+    private getMaximum(node: Node): Node {
         while (node.right) {
             node = node.right;
         }
@@ -228,7 +232,7 @@ export class RedBlackTree {
         return this.isExistRecursively(currentNode.right, key);
     }
 
-    public add(key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: (()=> void) | null): boolean {
+    public add(key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: (() => void) | null): boolean {
         if (this.isExist(key)) {
             return false;
         }
@@ -280,7 +284,7 @@ export class RedBlackTree {
         return true;
     }
 
-    private addNode(node: Node, key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: (()=> void) | null): Node {
+    private addNode(node: Node, key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: (() => void) | null): Node {
         let newNode: Node;
 
         while (true) {
@@ -295,7 +299,7 @@ export class RedBlackTree {
                 }
             } else {
                 if (!node.right) {
-                    newNode = new Node(key, description, keyTranslated, descriptionTranslated,gimmick, Color.Red, node);
+                    newNode = new Node(key, description, keyTranslated, descriptionTranslated, gimmick, Color.Red, node);
                     node.right = newNode;
 
                     break;
@@ -493,7 +497,7 @@ export class RedBlackTree {
         }
 
         if (node.left && node.right) {
-            const successor: Node = this.getMin(node.right!);
+            const successor: Node = this.getMinimum(node.right!);
             node.key = successor.key;
             node = successor;
         }
