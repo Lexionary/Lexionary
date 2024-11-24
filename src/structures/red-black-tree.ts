@@ -30,11 +30,12 @@ export class Node {
     private _left: Node | null = null;
     private _right: Node | null = null;
 
-    public constructor(key: string, description: string, keyTranslated: string, descriptionTranslated: string, color: Color, parent: Node | null) {
+    public constructor(key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: void | null, color: Color, parent: Node | null) {
         this._key = key;
         this._description = description;
         this._keyTranslated = keyTranslated;
         this._descriptionTranslated = descriptionTranslated;
+        this._gimmick = gimmick;
         this._color = color;
         this._parent = parent;
     }
@@ -227,13 +228,13 @@ export class RedBlackTree {
         return this.isExistRecursively(currentNode.right, key);
     }
 
-    public add(key: string, description: string, keyTranslated: string, descriptionTranslated: string): boolean {
+    public add(key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: void | null): boolean {
         if (this.isExist(key)) {
             return false;
         }
 
         if (this.root === null) {
-            this.root = new Node(key, description, keyTranslated, descriptionTranslated, Color.Black, null);
+            this.root = new Node(key, description, keyTranslated, descriptionTranslated, gimmick, Color.Black, null);
 
             return true;
         }
@@ -279,13 +280,13 @@ export class RedBlackTree {
         return true;
     }
 
-    private addNode(node: Node, key: string, description: string, keyTranslated: string, descriptionTranslated: string): Node {
+    private addNode(node: Node, key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: void | null): Node {
         let newNode: Node;
 
         while (true) {
             if (this.compareKeyDirection(key, node.key) === KeyDirection.Left) {
                 if (!node.left) {
-                    newNode = new Node(key, description, keyTranslated, descriptionTranslated, Color.Red, node);
+                    newNode = new Node(key, description, keyTranslated, descriptionTranslated, gimmick, Color.Red, node);
                     node.left = newNode;
 
                     break;
@@ -294,7 +295,7 @@ export class RedBlackTree {
                 }
             } else {
                 if (!node.right) {
-                    newNode = new Node(key, description, keyTranslated, descriptionTranslated, Color.Red, node);
+                    newNode = new Node(key, description, keyTranslated, descriptionTranslated,gimmick, Color.Red, node);
                     node.right = newNode;
 
                     break;
