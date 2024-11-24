@@ -728,13 +728,13 @@ RAW_DICTIONARY_DATA.forEach((rawDictionaryData: RawDictionaryDataInterface): voi
 // console.log("\n");
 // console.log("\n");
 
-console.log(EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Test"));
-console.log(EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Air"));
-console.log(EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Testing"));
-console.log(EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Aircraft Carrier"));
-console.log(EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Airplane"));
-console.log(EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Shrimp"));
-console.log(EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Chocolate"));
+EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Test");
+EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Air");
+EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Testing");
+EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Aircraft Carrier");
+EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Airplane");
+EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Shrimp");
+EN_TO_IN_RED_BLACK_TREE.getNodesBySimiliarity("Chocolate");
 </script>
 
 <template>Test</template>

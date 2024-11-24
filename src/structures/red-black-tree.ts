@@ -216,26 +216,6 @@ export class RedBlackTree {
         }
     }
 
-    public getNodeByKey(key: string): Node | null {
-        return this.getNodeByKeyRecursively(this.root, key);
-    }
-
-    private getNodeByKeyRecursively(currentNode: Node | null, key: string): Node | null {
-        if (currentNode === null) {
-            return null;
-        }
-
-        if (key.toLowerCase() == currentNode.key.toLowerCase()) {
-            return currentNode;
-        }
-
-        if (key.toLowerCase() < currentNode.key.toLowerCase()) {
-            return this.getNodeByKeyRecursively(currentNode.left, key);
-        }
-
-        return this.getNodeByKeyRecursively(currentNode.right, key);
-    }
-
     public getNodesByKey(key: string): Node[] {
         const result: Node[] = [];
 
@@ -252,6 +232,25 @@ export class RedBlackTree {
 
             this.getNodesByKeyRecursively(currentNode.left, key, result);
             this.getNodesByKeyRecursively(currentNode.right, key, result);
+        }
+    }
+
+    public getNodesByDescription(description: string): Node[] {
+        const result: Node[] = [];
+
+        this.getNodesByDescriptionRecursively(this.root, description, result);
+
+        return result;
+    }
+
+    private getNodesByDescriptionRecursively(currentNode: Node | null, description: string, result: Node[]): void {
+        if (currentNode !== null) {
+            if (currentNode.description.toLowerCase().includes(description.toLowerCase())) {
+                result.push(currentNode);
+            }
+
+            this.getNodesByDescriptionRecursively(currentNode.left, description, result);
+            this.getNodesByDescriptionRecursively(currentNode.right, description, result);
         }
     }
 
@@ -288,7 +287,7 @@ export class RedBlackTree {
         console.log(keyWords);
 
         const similiarNodes: Node[] = [];
-        
+
         keyWords.forEach((keyWord: string): void => {
             const similiarNodesByKey: Node[] = this.getNodesByKey(keyWord);
 
@@ -298,6 +297,18 @@ export class RedBlackTree {
                 }
             });
         });
+
+        keyWords.forEach((keyWord: string): void => {
+            const similiarNodesByDescription: Node[] = this.getNodesByDescription(keyWord);
+
+            similiarNodesByDescription.forEach((node: Node): void => {
+                if (similiarNodes.includes(node) === false) {
+                    similiarNodes.push(node);
+                }
+            });
+        });
+
+        console.log(similiarNodes);
 
         return similiarNodes;
     }
