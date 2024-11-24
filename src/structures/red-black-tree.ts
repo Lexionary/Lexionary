@@ -226,12 +226,31 @@ export class RedBlackTree {
 
     private getNodesByKeyRecursively(currentNode: Node | null, key: string, result: Node[]): void {
         if (currentNode !== null) {
-            if (currentNode.key.toLowerCase().includes(key.toLowerCase())) {
+            if (key.toLowerCase() === currentNode.key.toLowerCase()) {
                 result.push(currentNode);
             }
 
             this.getNodesByKeyRecursively(currentNode.left, key, result);
             this.getNodesByKeyRecursively(currentNode.right, key, result);
+        }
+    }
+
+    public getNodesByIncludedKey(key: string): Node[] {
+        const result: Node[] = [];
+
+        this.getNodesByIncludedKeyRecursively(this.root, key, result);
+
+        return result;
+    }
+
+    private getNodesByIncludedKeyRecursively(currentNode: Node | null, key: string, result: Node[]): void {
+        if (currentNode !== null) {
+            if (currentNode.key.toLowerCase().includes(key.toLowerCase())) {
+                result.push(currentNode);
+            }
+
+            this.getNodesByIncludedKeyRecursively(currentNode.left, key, result);
+            this.getNodesByIncludedKeyRecursively(currentNode.right, key, result);
         }
     }
 
@@ -245,12 +264,31 @@ export class RedBlackTree {
 
     private getNodesByDescriptionRecursively(currentNode: Node | null, description: string, result: Node[]): void {
         if (currentNode !== null) {
-            if (currentNode.description.toLowerCase().includes(description.toLowerCase())) {
+            if (description.toLowerCase() === currentNode.description.toLowerCase()) {
                 result.push(currentNode);
             }
 
             this.getNodesByDescriptionRecursively(currentNode.left, description, result);
             this.getNodesByDescriptionRecursively(currentNode.right, description, result);
+        }
+    }
+
+    public getNodesByIncludedDescription(description: string): Node[] {
+        const result: Node[] = [];
+
+        this.getNodesByIncludedDescriptionRecursively(this.root, description, result);
+
+        return result;
+    }
+
+    private getNodesByIncludedDescriptionRecursively(currentNode: Node | null, description: string, result: Node[]): void {
+        if (currentNode !== null) {
+            if (currentNode.description.toLowerCase().includes(description.toLowerCase())) {
+                result.push(currentNode);
+            }
+
+            this.getNodesByIncludedDescriptionRecursively(currentNode.left, description, result);
+            this.getNodesByIncludedDescriptionRecursively(currentNode.right, description, result);
         }
     }
 
@@ -299,9 +337,29 @@ export class RedBlackTree {
         });
 
         keyWords.forEach((keyWord: string): void => {
+            const similiarNodesByIncludedKey: Node[] = this.getNodesByIncludedKey(keyWord);
+
+            similiarNodesByIncludedKey.forEach((node: Node): void => {
+                if (similiarNodes.includes(node) === false) {
+                    similiarNodes.push(node);
+                }
+            });
+        });
+
+        keyWords.forEach((keyWord: string): void => {
             const similiarNodesByDescription: Node[] = this.getNodesByDescription(keyWord);
 
             similiarNodesByDescription.forEach((node: Node): void => {
+                if (similiarNodes.includes(node) === false) {
+                    similiarNodes.push(node);
+                }
+            });
+        });
+
+        keyWords.forEach((keyWord: string): void => {
+            const similiarNodesByIncludedDescription: Node[] = this.getNodesByIncludedDescription(keyWord);
+
+            similiarNodesByIncludedDescription.forEach((node: Node): void => {
                 if (similiarNodes.includes(node) === false) {
                     similiarNodes.push(node);
                 }
