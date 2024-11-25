@@ -391,7 +391,7 @@ export class RedBlackTree {
         return this.isExistRecursively(currentNode.right, key);
     }
 
-    public add(key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: (() => void) | null): boolean {
+    public add(key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: (() => void) | null = null): boolean {
         if (this.isExist(key)) {
             return false;
         }
