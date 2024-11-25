@@ -1,6 +1,6 @@
 import type { DictionaryDataInterface, RawDictionaryDataInterface } from "@/types/dictionary";
 import { RedBlackTree } from "@/structures/red-black-tree";
-import { barrelRoll, flip, spin } from "@/helpers/gimmick";
+import { barrelRoll, blue, flip, green, indigo, orange, purple, red, spin, yellow } from "@/helpers/gimmick";
 import dictionaryData from "@/assets/dictionary-data.json";
 
 const rawDictionaryData: RawDictionaryDataInterface[] = dictionaryData.data;
@@ -29,6 +29,55 @@ export const gimmickNodes: DictionaryDataInterface[] = [
         keyIdn: "Muter Muter",
         descriptionIdn: "Muter muter",
         gimmick: spin,
+    },
+    {
+        keyEng: "Red",
+        descriptionEng: "The color of passion and energy",
+        keyIdn: "Merah",
+        descriptionIdn: "Warna semangat dan energi",
+        gimmick: red,
+    },
+    {
+        keyEng: "Orange",
+        descriptionEng: "The color of joy and creativity",
+        keyIdn: "Oranye",
+        descriptionIdn: "Warna kegembiraan dan kreativitas",
+        gimmick: orange,
+    },
+    {
+        keyEng: "Yellow",
+        descriptionEng: "The color of sunshine and happiness",
+        keyIdn: "Kuning",
+        descriptionIdn: "Warna sinar matahari dan kebahagiaan",
+        gimmick: yellow,
+    },
+    {
+        keyEng: "Green",
+        descriptionEng: "The color of nature and tranquility",
+        keyIdn: "Hijau",
+        descriptionIdn: "Warna alam dan ketenangan",
+        gimmick: green,
+    },
+    {
+        keyEng: "Blue",
+        descriptionEng: "The color of calm and serenity",
+        keyIdn: "Biru",
+        descriptionIdn: "Warna ketenangan dan kedamaian",
+        gimmick: blue,
+    },
+    {
+        keyEng: "Indigo",
+        descriptionEng: "The color of intuition and perception",
+        keyIdn: "Nila",
+        descriptionIdn: "Warna intuisi dan persepsi",
+        gimmick: indigo,
+    },
+    {
+        keyEng: "Purple",
+        descriptionEng: "The color of royalty and luxury",
+        keyIdn: "Ungu",
+        descriptionIdn: "Warna kerajaan dan kemewahan",
+        gimmick: purple,
     },
 ];
 

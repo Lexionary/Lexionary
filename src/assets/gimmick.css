@@ -16,6 +16,34 @@
     animation: spin 2s;
 }
 
+.red {
+    background-color: theme("colors.red.400");
+}
+
+.orange {
+    background-color: theme("colors.orange.400");
+}
+
+.yellow {
+    background-color: theme("colors.yellow.400");
+}
+
+.green {
+    background-color: theme("colors.green.400");
+}
+
+.blue {
+    background-color: theme("colors.blue.400");
+}
+
+.indigo {
+    background-color: theme("colors.indigo.400");
+}
+
+.purple {
+    background-color: theme("colors.purple.400");
+}
+
 /* Keyframes */
 @keyframes barrel-roll {
     from {

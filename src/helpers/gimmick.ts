@@ -20,3 +20,31 @@ export function flip(): void {
 export function spin(): void {
     return classBasedAnimation("spin", 2000);
 }
+
+export function red(): void {
+    return classBasedAnimation("red", 2000);
+}
+
+export function orange(): void {
+    return classBasedAnimation("orange", 2000);
+}
+
+export function yellow(): void {
+    return classBasedAnimation("yellow", 2000);
+}
+
+export function green(): void {
+    return classBasedAnimation("green", 2000);
+}
+
+export function blue(): void {
+    return classBasedAnimation("blue", 2000);
+}
+
+export function indigo(): void {
+    return classBasedAnimation("indigo", 2000);
+}
+
+export function purple(): void {
+    return classBasedAnimation("purple", 2000);
+}
