@@ -5,6 +5,7 @@ import { useDebouncedRef } from "@/composables"
 import { Node, RedBlackTree } from "@/structures/red-black-tree"
 import { EN_RBT, ID_RBT } from "@/helpers/dictionary"
 import { debounce } from "@/helpers/debounce"
+import { darkMode } from "@/helpers/theme"
 import { Language } from "@/types/dictionary"
 
 import Button from "primevue/button"
@@ -36,7 +37,7 @@ watch(lastResultGimmick, (gimmick: (() => void) | null) => {
 <template>
   <nav class="container mx-auto px-4 py-2">
     <div class="w-100 text-end">
-      <Button icon="iconify fluent--weather-moon-24-filled" variant="text" rounded></Button>
+      <Button @click="darkMode = !darkMode" :icon="`iconify ${darkMode ? 'fluent--weather-moon-24-filled' : 'fluent--weather-sunny-24-filled'}`" variant="text" rounded></Button>
     </div>
   </nav>
 
