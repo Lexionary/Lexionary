@@ -27,6 +27,12 @@ importers:
         specifier: ^4.4.5
         version: 4.4.5(vue@3.5.13(typescript@5.6.3))
     devDependencies:
+      '@iconify-json/fluent':
+        specifier: ^1.2.8
+        version: 1.2.8
+      '@iconify/tailwind':
+        specifier: ^1.1.3
+        version: 1.1.3
       '@tsconfig/node22':
         specifier: ^22.0.0
         version: 22.0.0
@@ -425,6 +431,15 @@ packages:
   '@humanwhocodes/retry@0.4.1':
     resolution: {integrity: sha512-c7hNEllBlenFTHBky65mhq8WD2kbN9Q6gk0bTk8lSBvc554jpXSkST1iePudpt7+A/AQvuHs9EMqjHDXMY1lrA==}
     engines: {node: '>=18.18'}
+
+  '@iconify-json/fluent@1.2.8':
+    resolution: {integrity: sha512-yFpS3eKof874LYu0/pK0epz2c+UXlF5lTY+oX+xcXP9V5NAe4oSgWMBnKvJsxsYSEbgGhAMqDf+4y0GvyBzLVw==}
+
+  '@iconify/tailwind@1.1.3':
+    resolution: {integrity: sha512-SfyeT+2b/aKWA6DjwdevXdLUqaEqJ5xWTegD92KItaWc47IYsGuqrt/GOz4dJCPcTVCrsUjlvMpy8cNd+uV5nQ==}
+
+  '@iconify/types@2.0.0':
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -2274,6 +2289,16 @@ snapshots:
   '@humanwhocodes/retry@0.3.1': {}
 
   '@humanwhocodes/retry@0.4.1': {}
+
+  '@iconify-json/fluent@1.2.8':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify/tailwind@1.1.3':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify/types@2.0.0': {}
 
   '@isaacs/cliui@8.0.2':
     dependencies:

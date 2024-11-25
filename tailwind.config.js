@@ -1,3 +1,5 @@
+import { addIconSelectors } from "@iconify/tailwind";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -9,6 +11,7 @@ export default {
   },
   plugins: [
     require('tailwindcss-primeui'),
+    addIconSelectors(["fluent"]),
   ],
 }
 
