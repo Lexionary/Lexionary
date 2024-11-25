@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { computed, ref, watch } from "vue"
+import { computed, ref, watch } from "vue";
 
-import { Node } from "@/structures/red-black-tree"
-import { EN_RBT, ID_RBT } from "@/helpers/dictionary"
-import { debounce } from "@/helpers/debounce"
+import { Node } from "@/structures/red-black-tree";
+import { EN_RBT, ID_RBT } from "@/helpers/dictionary";
+import { debounce } from "@/helpers/debounce";
+
+import InputText from "primevue/inputtext";
 
 const searchQuery = ref<string>("");
 const result = computed<Node[]>(() => EN_RBT.getNodesBySimiliarity(searchQuery.value));
@@ -21,10 +23,10 @@ watch(lastResultGimmick, (gimmick: (() => void) | null) => {
 </script>
 
 <template>
-    <div>
+    <main>
         <h1>Search By Relevance</h1>
 
-        <input type="text" v-model="searchQuery" placeholder="Search..." class="search-bar" />
+        <InputText v-model="searchQuery" placeholder="Search" class="w-full"></InputText>
 
         <ul>
             <template v-for="item in result" :key="item.key">
@@ -32,9 +34,10 @@ watch(lastResultGimmick, (gimmick: (() => void) | null) => {
                 <br />
             </template>
         </ul>
-    </div>
+    </main>
 </template>
 
 <style>
+@import url("@/assets/style.css");
 @import url("@/assets/gimmick.css");
 </style>
