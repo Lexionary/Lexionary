@@ -44,6 +44,10 @@
     background-color: theme("colors.purple.400");
 }
 
+.blur {
+    filter: blur(10px);
+}
+
 /* Keyframes */
 @keyframes barrel-roll {
     from {

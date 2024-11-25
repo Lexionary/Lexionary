@@ -1,6 +1,6 @@
 import type { DictionaryDataInterface, RawDictionaryDataInterface } from "@/types/dictionary";
 import { RedBlackTree } from "@/structures/red-black-tree";
-import { barrelRoll, blue, flip, green, indigo, orange, purple, red, spin, yellow } from "@/helpers/gimmick";
+import { barrelRoll, blue, blur, flip, green, indigo, orange, purple, red, spin, yellow } from "@/helpers/gimmick";
 import dictionaryData from "@/assets/dictionary-data.json";
 
 const rawDictionaryData: RawDictionaryDataInterface[] = dictionaryData.data;
@@ -79,6 +79,13 @@ export const gimmickNodes: DictionaryDataInterface[] = [
         descriptionIdn: "Warna kerajaan dan kemewahan",
         gimmick: purple,
     },
+    {
+        keyEng: "Blur",
+        descriptionEng: "blur the screen",
+        keyIdn: "Buram",
+        descriptionIdn: "samar-samar",
+        gimmick: blur,
+    }
 ];
 
 rawDictionaryData.forEach((rawDictionaryData: RawDictionaryDataInterface): void => {

@@ -48,3 +48,7 @@ export function indigo(): void {
 export function purple(): void {
     return classBasedAnimation("purple", 5000);
 }
+
+export function blur(): void {
+  return classBasedAnimation("blur", 5000);
+}
