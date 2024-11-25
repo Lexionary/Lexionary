@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from "vue"
 
+import { useDebouncedRef } from "@/composables"
 import { Node, RedBlackTree } from "@/structures/red-black-tree"
 import { EN_RBT, ID_RBT } from "@/helpers/dictionary"
 import { debounce } from "@/helpers/debounce"
@@ -16,7 +17,7 @@ const languageOptions: { label: string, value: Language }[] = [
 ]
 
 const selectedLanguage = ref<Language>(Language.BAHASA_INDONESIA);
-const searchQuery = ref<string>("");
+const searchQuery = useDebouncedRef<string>("", 200);
 
 const activeRBT = computed<RedBlackTree>(() => selectedLanguage.value === Language.BAHASA_INDONESIA ? ID_RBT : EN_RBT)
 const result = computed<Node[]>(() => activeRBT.value.getNodesBySimiliarity(searchQuery.value));
