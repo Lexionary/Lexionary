@@ -1,40 +1,62 @@
 <script setup lang="ts">
-import { computed, ref, watch } from "vue";
+import { computed, ref, watch } from "vue"
 
-import { Node } from "@/structures/red-black-tree";
-import { EN_RBT, ID_RBT } from "@/helpers/dictionary";
-import { debounce } from "@/helpers/debounce";
+import { Node, RedBlackTree } from "@/structures/red-black-tree"
+import { EN_RBT, ID_RBT } from "@/helpers/dictionary"
+import { debounce } from "@/helpers/debounce"
+import { Language } from "@/types/dictionary"
 
-import InputText from "primevue/inputtext";
+import Button from "primevue/button"
+import InputText from "primevue/inputtext"
+import SelectButton from "primevue/selectbutton"
 
+const languageOptions: { label: string, value: Language }[] = [
+  { label: "Indonesian", value: Language.BAHASA_INDONESIA },
+  { label: "English", value: Language.ENGLISH },
+]
+
+const selectedLanguage = ref<Language>(Language.BAHASA_INDONESIA);
 const searchQuery = ref<string>("");
-const result = computed<Node[]>(() => EN_RBT.getNodesBySimiliarity(searchQuery.value));
+
+const activeRBT = computed<RedBlackTree>(() => selectedLanguage.value === Language.BAHASA_INDONESIA ? ID_RBT : EN_RBT)
+const result = computed<Node[]>(() => activeRBT.value.getNodesBySimiliarity(searchQuery.value));
 
 const lastResultGimmick = computed<(() => void) | null>(() => result.value[0]?.gimmick);
-
 watch(lastResultGimmick, (gimmick: (() => void) | null) => {
   if (!gimmick) {
     return;
   }
 
-  const debouncedGimmick = debounce(gimmick);
+  const debouncedGimmick = debounce(gimmick, 1000);
   debouncedGimmick();
 })
 </script>
 
 <template>
-    <main>
-        <h1>Search By Relevance</h1>
+  <nav class="container mx-auto px-4 py-2">
+    <div class="w-100 text-end">
+      <Button icon="iconify fluent--weather-moon-24-filled" variant="text" rounded></Button>
+    </div>
+  </nav>
 
-        <InputText v-model="searchQuery" placeholder="Search" class="w-full"></InputText>
+  <main class="container mx-auto pt-24 pb-12 px-4">
+    <section class="text-center">
+      <h1 class="text-4xl">Lexionary</h1>
+      <!-- Ganti taglinenya nanti -->
+      <p class="mt-3">Find your lexical needs (tentative).</p>
 
-        <ul>
-            <template v-for="item in result" :key="item.key">
-                <li style="white-space: pre">{{ item.toString() }}</li>
-                <br />
-            </template>
-        </ul>
-    </main>
+      <div class="mt-8">
+        <div class="flex gap-x-4 justify-center">
+          <SelectButton v-model="selectedLanguage" :options="languageOptions" optionValue="value" optionLabel="label"></SelectButton>
+        </div>
+        <InputText v-model="searchQuery" placeholder="Search your word" class="mt-4"></InputText>
+      </div>
+    </section>
+
+    <section v-if="searchQuery">
+      <p v-for="item in result" :key="item.key">{{ item.toString() }}</p>
+    </section>
+  </main>
 </template>
 
 <style>
