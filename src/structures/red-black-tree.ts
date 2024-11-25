@@ -328,37 +328,27 @@ export class RedBlackTree {
 
         keyWords.forEach((keyWord: string): void => {
             const similiarNodesByKey: Node[] = this.getNodesByKey(keyWord);
-
             similiarNodesByKey.forEach((node: Node): void => {
                 if (similiarNodes.includes(node) === false) {
                     similiarNodes.push(node);
                 }
             });
-        });
 
-        keyWords.forEach((keyWord: string): void => {
-            const similiarNodesByIncludedKey: Node[] = this.getNodesByIncludedKey(keyWord);
-
-            similiarNodesByIncludedKey.forEach((node: Node): void => {
-                if (similiarNodes.includes(node) === false) {
-                    similiarNodes.push(node);
-                }
-            });
-        });
-
-        keyWords.forEach((keyWord: string): void => {
             const similiarNodesByDescription: Node[] = this.getNodesByDescription(keyWord);
-
             similiarNodesByDescription.forEach((node: Node): void => {
                 if (similiarNodes.includes(node) === false) {
                     similiarNodes.push(node);
                 }
             });
-        });
 
-        keyWords.forEach((keyWord: string): void => {
+            const similiarNodesByIncludedKey: Node[] = this.getNodesByIncludedKey(keyWord);
+            similiarNodesByIncludedKey.forEach((node: Node): void => {
+                if (similiarNodes.includes(node) === false) {
+                    similiarNodes.push(node);
+                }
+            });
+
             const similiarNodesByIncludedDescription: Node[] = this.getNodesByIncludedDescription(keyWord);
-
             similiarNodesByIncludedDescription.forEach((node: Node): void => {
                 if (similiarNodes.includes(node) === false) {
                     similiarNodes.push(node);
