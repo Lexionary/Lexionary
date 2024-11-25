@@ -59,7 +59,7 @@ watch(lastResultGimmick, (gimmick: (() => void) | null) => {
         </section>
 
         <section v-if="searchQuery" class="mt-4 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
-            <div v-for="item in result" :key="item.key" class="px-4 py-2 border shadow rounded-xl">
+            <div v-for="item in result" :key="item.key" class="px-4 py-2 bg-white border shadow rounded-xl">
                 <h5 class="text-2xl font-bold">{{ item.key }}</h5>
                 <h6>{{ item.keyTranslated }}</h6>
                 <p class="text-sm mt-2">{{ item.description }}</p>
