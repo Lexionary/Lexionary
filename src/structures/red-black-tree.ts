@@ -320,7 +320,7 @@ export class RedBlackTree {
             return uniqueKeys;
         };
 
-        const keyWords: string[] = getKeyWords(key);
+        const keyWords: string[] = getKeyWords(key.trim());
 
         console.log(keyWords);
 
