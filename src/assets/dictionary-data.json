@@ -1,0 +1,586 @@
+{
+  "data": [
+    {
+      "keyEng": "Mirror",
+      "descriptionEng": "A reflective surface, typically of glass coated with a metal amalgam, that reflects a clear image",
+      "keyIdn": "Cermin",
+      "descriptionIdn": "Permukaan reflektif, biasanya dari kaca yang dilapisi dengan amalgam logam, yang memantulkan gambar yang jelas"
+    },
+    {
+      "keyEng": "Giraffe",
+      "descriptionEng": "A large African mammal with a very long neck and forelegs, having a coat patterned with brown patches separated by lighter lines",
+      "keyIdn": "Jerapah",
+      "descriptionIdn": "Mamalia besar Afrika dengan leher dan kaki depan yang sangat panjang, memiliki bulu berpola dengan bercak coklat yang dipisahkan oleh garis-garis yang lebih terang"
+    },
+    {
+      "keyEng": "Rabbit",
+      "descriptionEng": "A burrowing, plant-eating mammal with long ears, long hind legs, and a short tail",
+      "keyIdn": "Kelinci",
+      "descriptionIdn": "Mamalia pemakan tumbuhan yang menggali dengan telinga panjang, kaki belakang panjang, dan ekor pendek"
+    },
+    {
+      "keyEng": "Snake",
+      "descriptionEng": "A long limbless reptile that has no eyelids, a short tail, and jaws that are capable of considerable extension",
+      "keyIdn": "Ular",
+      "descriptionIdn": "Reptil panjang tanpa anggota badan yang tidak memiliki kelopak mata, ekor pendek, dan rahang yang mampu diperpanjang secara signifikan"
+    },
+    {
+      "keyEng": "Ice Cream",
+      "descriptionEng": "A soft frozen food made with sweetened and flavored milk fat",
+      "keyIdn": "Es Krim",
+      "descriptionIdn": "Makanan beku lembut yang dibuat dengan lemak susu yang dimaniskan dan diberi rasa"
+    },
+    {
+      "keyEng": "Tabby",
+      "descriptionEng": "A domestic cat with a distinctive coat that features stripes, dots, lines, or swirling patterns, usually with a mark resembling an 'M' on its forehead",
+      "keyIdn": "Kucing Belang",
+      "descriptionIdn": "Kucing domestik dengan bulu khas yang memiliki garis-garis, titik-titik, garis-garis, atau pola berputar, biasanya dengan tanda yang menyerupai 'M' di dahinya"
+    },
+    {
+      "keyEng": "Cat",
+      "descriptionEng": "A small domesticated carnivorous mammal with soft fur, a short snout, and retractile claws",
+      "keyIdn": "Kucing",
+      "descriptionIdn": "Mamalia karnivora kecil yang dijinakkan dengan bulu lembut, moncong pendek, dan cakar yang dapat ditarik"
+    },
+    {
+      "keyEng": "Kangaroo",
+      "descriptionEng": "A large plant-eating marsupial with a long powerful tail and strongly developed hind limbs that enable it to travel by leaping",
+      "keyIdn": "Kanguru",
+      "descriptionIdn": "Marsupial pemakan tumbuhan besar dengan ekor panjang yang kuat dan anggota tubuh belakang yang sangat berkembang yang memungkinkannya untuk bepergian dengan melompat"
+    },
+    {
+      "keyEng": "Glider",
+      "descriptionEng": "A light aircraft that is designed to fly for long periods without using an engine",
+      "keyIdn": "Pesawat Layang",
+      "descriptionIdn": "Pesawat ringan yang dirancang untuk terbang dalam waktu lama tanpa menggunakan mesin"
+    },
+    {
+      "keyEng": "Airfield",
+      "descriptionEng": "An area of land set aside for the takeoff, landing, and maintenance of aircraft",
+      "keyIdn": "Lapangan Terbang",
+      "descriptionIdn": "Area tanah yang disediakan untuk lepas landas, mendarat, dan pemeliharaan pesawat"
+    },
+    {
+      "keyEng": "Coupe",
+      "descriptionEng": "A car with a fixed-roof body style that is shorter than a sedan or saloon of the same model",
+      "keyIdn": "Coupe",
+      "descriptionIdn": "Mobil dengan gaya bodi atap tetap yang lebih pendek dari sedan atau saloon dari model yang sama"
+    },
+    {
+      "keyEng": "Tiger",
+      "descriptionEng": "A large cat species native to Asia, having a tawny coat with transverse black stripes",
+      "keyIdn": "Harimau",
+      "descriptionIdn": "Spesies kucing besar yang berasal dari Asia, memiliki bulu coklat kekuningan dengan garis-garis hitam melintang"
+    },
+    {
+      "keyEng": "Helicopter",
+      "descriptionEng": "A type of aircraft which derives both lift and propulsion from one or two sets of horizontally revolving rotors",
+      "keyIdn": "Helikopter",
+      "descriptionIdn": "Jenis pesawat yang memperoleh daya angkat dan dorongan dari satu atau dua set rotor yang berputar secara horizontal"
+    },
+    {
+      "keyEng": "Banana",
+      "descriptionEng": "A long curved fruit that grows in clusters and has soft pulpy flesh and yellow skin when ripe",
+      "keyIdn": "Pisang",
+      "descriptionIdn": "Buah panjang yang melengkung yang tumbuh dalam kelompok dan memiliki daging yang lembut dan berkulit kuning ketika matang"
+    },
+    {
+      "keyEng": "Mutt",
+      "descriptionEng": "A dog, especially a mongrel",
+      "keyIdn": "Anjing Campuran",
+      "descriptionIdn": "Anjing, terutama anjing campuran"
+    },
+    {
+      "keyEng": "Violin",
+      "descriptionEng": "A stringed musical instrument of treble pitch, played with a horsehair bow",
+      "keyIdn": "Biola",
+      "descriptionIdn": "Alat musik gesek dengan nada tinggi, dimainkan dengan busur rambut kuda"
+    },
+    {
+      "keyEng": "Zipper",
+      "descriptionEng": "A device used for fastening clothing, bags, etc., consisting of two strips of fabric with interlocking metal or plastic teeth and a sliding piece that closes an opening by drawing the teeth together",
+      "keyIdn": "Ritsleting",
+      "descriptionIdn": "Perangkat yang digunakan untuk mengikat pakaian, tas, dll., terdiri dari dua strip kain dengan gigi logam atau plastik yang saling mengunci dan bagian geser yang menutup bukaan dengan menarik gigi bersama-sama"
+    },
+    {
+      "keyEng": "Penguin",
+      "descriptionEng": "A large flightless seabird of the southern hemisphere, with black upper parts and white underparts and wings developed into flippers for swimming underwater",
+      "keyIdn": "Pinguin",
+      "descriptionIdn": "Burung laut besar yang tidak bisa terbang dari belahan bumi selatan, dengan bagian atas hitam dan bagian bawah putih serta sayap yang berkembang menjadi sirip untuk berenang di bawah air"
+    },
+    {
+      "keyEng": "Notebook",
+      "descriptionEng": "A small book with blank or ruled pages for writing notes in",
+      "keyIdn": "Buku Catatan",
+      "descriptionIdn": "Buku kecil dengan halaman kosong atau bergaris untuk menulis catatan"
+    },
+    {
+      "keyEng": "SUV",
+      "descriptionEng": "A sport utility vehicle, a kind of passenger vehicle which combines the towing capacity of a pickup truck with the passenger-carrying space of a minivan",
+      "keyIdn": "SUV",
+      "descriptionIdn": "Kendaraan utilitas olahraga, jenis kendaraan penumpang yang menggabungkan kapasitas penarik truk pickup dengan ruang angkut penumpang minivan"
+    },
+    {
+      "keyEng": "Aircraft",
+      "descriptionEng": "Any machine capable of flying, including airplanes, helicopters, and gliders",
+      "keyIdn": "Pesawat",
+      "descriptionIdn": "Mesin apa pun yang mampu terbang, termasuk pesawat terbang, helikopter, dan glider"
+    },
+    {
+      "keyEng": "Window",
+      "descriptionEng": "An opening in the wall or roof of a building or vehicle that is fitted with glass or other transparent material, in a frame, to admit light or air and allow people to see out",
+      "keyIdn": "Jendela",
+      "descriptionIdn": "Bukaan di dinding atau atap bangunan atau kendaraan yang dilengkapi dengan kaca atau bahan transparan lainnya, dalam bingkai, untuk memasukkan cahaya atau udara dan memungkinkan orang untuk melihat keluar"
+    },
+    {
+      "keyEng": "Kitten",
+      "descriptionEng": "A young cat",
+      "keyIdn": "Anak Kucing",
+      "descriptionIdn": "Kucing muda"
+    },
+    {
+      "keyEng": "Turtle",
+      "descriptionEng": "A slow-moving reptile, enclosed in a scaly or leathery domed shell, able to retract its head and thick legs",
+      "keyIdn": "Kura-kura",
+      "descriptionIdn": "Reptil yang bergerak lambat, tertutup dalam cangkang berkubah bersisik atau berkulit, mampu menarik kembali kepala dan kaki tebalnya"
+    },
+    {
+      "keyEng": "Peacock",
+      "descriptionEng": "A large bird, the male of which has very long tail feathers that have eye-like markings and can be erected and fanned out in display",
+      "keyIdn": "Merak",
+      "descriptionIdn": "Burung besar, jantan yang memiliki bulu ekor sangat panjang yang memiliki tanda seperti mata dan dapat ditegakkan dan dikembangkan untuk dipamerkan"
+    },
+    {
+      "keyEng": "Monkey",
+      "descriptionEng": "A small to medium-sized primate that typically has a long tail, most kinds of which live in trees in tropical countries",
+      "keyIdn": "Monyet",
+      "descriptionIdn": "Primata kecil hingga sedang yang biasanya memiliki ekor panjang, sebagian besar jenisnya hidup di pohon di negara tropis"
+    },
+    {
+      "keyEng": "Book",
+      "descriptionEng": "A set of written, printed, or blank pages fastened together along one side and encased between protective covers",
+      "keyIdn": "Buku",
+      "descriptionIdn": "Sekumpulan halaman tertulis, tercetak, atau kosong yang diikat bersama di satu sisi dan dibungkus di antara sampul pelindung"
+    },
+    {
+      "keyEng": "Queen",
+      "descriptionEng": "The female ruler of an independent state, especially one who inherits the position by right of birth",
+      "keyIdn": "Ratu",
+      "descriptionIdn": "Penguasa wanita dari negara merdeka, terutama yang mewarisi posisi tersebut berdasarkan hak kelahiran"
+    },
+    {
+      "keyEng": "Xylophone",
+      "descriptionEng": "A musical instrument played by striking a row of wooden bars of graduated length with one or more small wooden or plastic beaters",
+      "keyIdn": "Saron",
+      "descriptionIdn": "Alat musik yang dimainkan dengan memukul deretan batang kayu dengan panjang bertingkat dengan satu atau lebih pemukul kayu atau plastik kecil"
+    },
+    {
+      "keyEng": "Sedan",
+      "descriptionEng": "A passenger car in a three-box configuration with separate compartments for engine, passenger, and cargo",
+      "keyIdn": "Sedan",
+      "descriptionIdn": "Mobil penumpang dalam konfigurasi tiga kotak dengan kompartemen terpisah untuk mesin, penumpang, dan kargo"
+    },
+    {
+      "keyEng": "Lamp",
+      "descriptionEng": "A device for giving light, especially one that has a covering or is contained within something",
+      "keyIdn": "Lampu",
+      "descriptionIdn": "Perangkat untuk memberikan cahaya, terutama yang memiliki penutup atau terkandung dalam sesuatu"
+    },
+    {
+      "keyEng": "Television",
+      "descriptionEng": "A device that receives broadcast signals and reproduces them on a screen",
+      "keyIdn": "Televisi",
+      "descriptionIdn": "Perangkat yang menerima sinyal siaran dan mereproduksinya di layar"
+    },
+    {
+      "keyEng": "Walrus",
+      "descriptionEng": "A large gregarious marine mammal with two large downward-pointing tusks, found in the Arctic Ocean",
+      "keyIdn": "Walrus",
+      "descriptionIdn": "Mamalia laut besar yang suka berkelompok dengan dua gading besar yang mengarah ke bawah, ditemukan di Samudra Arktik"
+    },
+    {
+      "keyEng": "Wolf",
+      "descriptionEng": "A wild carnivorous mammal of the dog family, living and hunting in packs",
+      "keyIdn": "Serigala",
+      "descriptionIdn": "Mamalia karnivora liar dari keluarga anjing, hidup dan berburu dalam kelompok"
+    },
+    {
+      "keyEng": "Apple",
+      "descriptionEng": "The round fruit of a tree of the rose family, which typically has thin red or green skin and crisp flesh",
+      "keyIdn": "Apel",
+      "descriptionIdn": "Buah bulat dari pohon keluarga mawar, yang biasanya memiliki kulit merah atau hijau tipis dan daging renyah"
+    },
+    {
+      "keyEng": "House",
+      "descriptionEng": "A building for human habitation, especially one that is lived in by a family or small group of people",
+      "keyIdn": "Rumah",
+      "descriptionIdn": "Bangunan untuk tempat tinggal manusia, terutama yang dihuni oleh keluarga atau kelompok kecil orang"
+    },
+    {
+      "keyEng": "Hat",
+      "descriptionEng": "A shaped covering for the head worn for warmth, as a fashion item, or as part of a uniform",
+      "keyIdn": "Topi",
+      "descriptionIdn": "Penutup berbentuk untuk kepala yang dikenakan untuk kehangatan, sebagai barang mode, atau sebagai bagian dari seragam"
+    },
+    {
+      "keyEng": "Convertible",
+      "descriptionEng": "A car with a flexible roof that can retract and fold away, converting it from an enclosed to an open-air vehicle",
+      "keyIdn": "Convertible",
+      "descriptionIdn": "Mobil dengan atap fleksibel yang dapat ditarik dan dilipat, mengubahnya dari kendaraan tertutup menjadi kendaraan terbuka"
+    },
+    {
+      "keyEng": "Bicycle",
+      "descriptionEng": "A vehicle composed of two wheels held in a frame one behind the other, propelled by pedals and steered with handlebars attached to the front wheel",
+      "keyIdn": "Sepeda",
+      "descriptionIdn": "Kendaraan yang terdiri dari dua roda yang dipegang dalam bingkai satu di belakang yang lain, didorong oleh pedal dan dikendalikan dengan setang yang terpasang pada roda depan"
+    },
+    {
+      "keyEng": "Yogurt",
+      "descriptionEng": "A semi-solid sourish food prepared from milk fermented by added bacteria",
+      "keyIdn": "Yogurt",
+      "descriptionIdn": "Makanan semi-padat yang asam yang disiapkan dari susu yang difermentasi oleh bakteri yang ditambahkan"
+    },
+    {
+      "keyEng": "Puppy",
+      "descriptionEng": "A young dog",
+      "keyIdn": "Anak Anjing",
+      "descriptionIdn": "Anjing muda"
+    },
+    {
+      "keyEng": "Orange",
+      "descriptionEng": "A large round juicy citrus fruit with a tough bright reddish-yellow rind",
+      "keyIdn": "Jeruk",
+      "descriptionIdn": "Buah jeruk besar bulat berair dengan kulit keras berwarna kuning kemerahan cerah"
+    },
+    {
+      "keyEng": "Unicorn",
+      "descriptionEng": "A mythical animal typically represented as a horse with a single straight horn projecting from its forehead",
+      "keyIdn": "Unicorn",
+      "descriptionIdn": "Hewan mitos yang biasanya digambarkan sebagai kuda dengan satu tanduk lurus yang menonjol dari dahinya"
+    },
+    {
+      "keyEng": "Airliner",
+      "descriptionEng": "A large airplane for transporting passengers and cargo",
+      "keyIdn": "Pesawat Penumpang",
+      "descriptionIdn": "Pesawat besar untuk mengangkut penumpang dan kargo"
+    },
+    {
+      "keyEng": "Watch",
+      "descriptionEng": "A small timepiece worn typically on a strap on one's wrist",
+      "keyIdn": "Jam Tangan",
+      "descriptionIdn": "Jam kecil yang biasanya dikenakan pada tali di pergelangan tangan"
+    },
+    {
+      "keyEng": "Jacket",
+      "descriptionEng": "An outer garment extending either to the waist or the hips, typically having sleeves and a fastening down the front",
+      "keyIdn": "Jaket",
+      "descriptionIdn": "Pakaian luar yang memanjang baik ke pinggang atau pinggul, biasanya memiliki lengan dan pengikat di bagian depan"
+    },
+    {
+      "keyEng": "Hound",
+      "descriptionEng": "A type of dog used for hunting",
+      "keyIdn": "Anjing Pemburu",
+      "descriptionIdn": "Jenis anjing yang digunakan untuk berburu"
+    },
+    {
+      "keyEng": "Airplane",
+      "descriptionEng": "A powered flying vehicle with fixed wings and a weight greater than that of the air it displaces",
+      "keyIdn": "Pesawat Terbang",
+      "descriptionIdn": "Kendaraan terbang yang bertenaga dengan sayap tetap dan berat lebih besar dari udara yang dipindahkannya, digunakan untuk mengangkut orang atau barang"
+    },
+    {
+      "keyEng": "Airport",
+      "descriptionEng": "A complex of runways and buildings for the takeoff, landing, and maintenance of civil aircraft, with facilities for passengers",
+      "keyIdn": "Bandara",
+      "descriptionIdn": "Kompleks landasan pacu dan bangunan untuk lepas landas, mendarat, dan pemeliharaan pesawat sipil, dengan fasilitas untuk penumpang"
+    },
+    {
+      "keyEng": "Radio",
+      "descriptionEng": "A device that receives radio signals and converts them into sound",
+      "keyIdn": "Radio",
+      "descriptionIdn": "Perangkat yang menerima sinyal radio dan mengubahnya menjadi suara"
+    },
+    {
+      "keyEng": "Whale",
+      "descriptionEng": "A very large marine mammal with a streamlined hairless body, a horizontal tail fin, and a blowhole on top of the head for breathing",
+      "keyIdn": "Paus",
+      "descriptionIdn": "Mamalia laut yang sangat besar dengan tubuh tanpa bulu yang ramping, sirip ekor horizontal, dan lubang sembur di atas kepala untuk bernapas"
+    },
+    {
+      "keyEng": "Balloon",
+      "descriptionEng": "A small bag made of thin rubber or other light material that can be inflated with air or gas",
+      "keyIdn": "Balon",
+      "descriptionIdn": "Kantong kecil yang terbuat dari karet tipis atau bahan ringan lainnya yang dapat diisi dengan udara atau gas"
+    },
+    {
+      "keyEng": "Chair",
+      "descriptionEng": "A separate seat for one person, typically with a back and four legs",
+      "keyIdn": "Kursi",
+      "descriptionIdn": "Tempat duduk terpisah untuk satu orang, biasanya dengan sandaran dan empat kaki"
+    },
+    {
+      "keyEng": "Quail",
+      "descriptionEng": "A small, short-tailed Old World game bird resembling a tiny partridge, typically having brown camouflaged plumage",
+      "keyIdn": "Puyuh",
+      "descriptionIdn": "Burung permainan Dunia Lama kecil dengan ekor pendek yang menyerupai burung puyuh kecil, biasanya memiliki bulu kamuflase coklat"
+    },
+    {
+      "keyEng": "Car",
+      "descriptionEng": "A road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people",
+      "keyIdn": "Mobil",
+      "descriptionIdn": "Kendaraan jalan raya, biasanya dengan empat roda, ditenagai oleh mesin pembakaran dalam dan mampu membawa sejumlah kecil orang"
+    },
+    {
+      "keyEng": "Dog",
+      "descriptionEng": "A domesticated carnivorous mammal that typically has a long snout, an acute sense of smell, and a barking, howling, or whining voice",
+      "keyIdn": "Anjing",
+      "descriptionIdn": "Mamalia karnivora yang dijinakkan yang biasanya memiliki moncong panjang, indra penciuman yang tajam, dan suara menggonggong, melolong, atau merengek"
+    },
+    {
+      "keyEng": "Pencil",
+      "descriptionEng": "An instrument for writing or drawing, typically consisting of a thin stick of graphite or a similar substance enclosed in a long thin piece of wood or fixed in a metal or plastic case",
+      "keyIdn": "Pensil",
+      "descriptionIdn": "Instrumen untuk menulis atau menggambar, biasanya terdiri dari batang tipis grafit atau zat serupa yang tertutup dalam potongan kayu panjang tipis atau dipasang dalam wadah logam atau plastik"
+    },
+    {
+      "keyEng": "Yacht",
+      "descriptionEng": "A medium-sized sailboat equipped for cruising or racing",
+      "keyIdn": "Kapal Pesiar",
+      "descriptionIdn": "Kapal layar berukuran sedang yang dilengkapi untuk berlayar atau balapan"
+    },
+    {
+      "keyEng": "Yak",
+      "descriptionEng": "A large domesticated wild ox with shaggy hair, humped shoulders, and large horns, used in Tibet as a pack animal and for its milk, meat, and hide",
+      "keyIdn": "Yak",
+      "descriptionIdn": "Lembu liar besar yang dijinakkan dengan rambut lebat, bahu bungkuk, dan tanduk besar, digunakan di Tibet sebagai hewan pengangkut dan untuk susu, daging, dan kulitnya"
+    },
+    {
+      "keyEng": "Vulture",
+      "descriptionEng": "A large bird of prey with the head and neck more or less bare of feathers, feeding chiefly on carrion",
+      "keyIdn": "Burung Bangkai",
+      "descriptionIdn": "Burung pemangsa besar dengan kepala dan leher yang lebih atau kurang tanpa bulu, terutama memakan bangkai"
+    },
+    {
+      "keyEng": "Fan",
+      "descriptionEng": "A device with rotating blades that creates a current of air for cooling or ventilation",
+      "keyIdn": "Kipas Angin",
+      "descriptionIdn": "Perangkat dengan bilah berputar yang menciptakan aliran udara untuk pendinginan atau ventilasi"
+    },
+    {
+      "keyEng": "Phone",
+      "descriptionEng": "A device that uses either a landline or cellular network to transmit voice and data communications",
+      "keyIdn": "Telepon",
+      "descriptionIdn": "Perangkat yang menggunakan jaringan telepon kabel atau seluler untuk mengirimkan komunikasi suara dan data"
+    },
+    {
+      "keyEng": "Umbrella",
+      "descriptionEng": "A device consisting of a circular canopy of cloth on a folding metal frame supported by a central rod, used as protection against rain or sometimes sun",
+      "keyIdn": "Payung",
+      "descriptionIdn": "Perangkat yang terdiri dari kanopi kain melingkar pada bingkai logam yang dapat dilipat yang didukung oleh batang pusat, digunakan sebagai perlindungan terhadap hujan atau kadang-kadang matahari"
+    },
+    {
+      "keyEng": "Computer",
+      "descriptionEng": "An electronic device for storing and processing data, typically in binary form, according to instructions given to it in a variable program",
+      "keyIdn": "Komputer",
+      "descriptionIdn": "Perangkat elektronik untuk menyimpan dan memproses data, biasanya dalam bentuk biner, sesuai dengan instruksi yang diberikan dalam program variabel"
+    },
+    {
+      "keyEng": "Lion",
+      "descriptionEng": "A large tawny-colored cat that lives in prides, found in Africa and northwestern India",
+      "keyIdn": "Singa",
+      "descriptionIdn": "Kucing besar berwarna coklat kekuningan yang hidup dalam kelompok, ditemukan di Afrika dan India barat laut"
+    },
+    {
+      "keyEng": "Parrot",
+      "descriptionEng": "A bird, often vividly colored, with a short downcurved hooked bill, grasping feet, and a raucous voice",
+      "keyIdn": "Burung Beo",
+      "descriptionIdn": "Burung, sering berwarna cerah, dengan paruh melengkung pendek, kaki yang dapat mencengkeram, dan suara yang keras"
+    },
+    {
+      "keyEng": "Camera",
+      "descriptionEng": "A device for recording visual images in the form of photographs, film, or video signals",
+      "keyIdn": "Kamera",
+      "descriptionIdn": "Perangkat untuk merekam gambar visual dalam bentuk foto, film, atau sinyal video"
+    },
+    {
+      "keyEng": "Raven",
+      "descriptionEng": "A large heavily built crow with mainly black plumage, feeding chiefly on carrion",
+      "keyIdn": "Gagak",
+      "descriptionIdn": "Gagak besar dengan tubuh berat dengan bulu hitam, terutama memakan bangkai"
+    },
+    {
+      "keyEng": "Elephant",
+      "descriptionEng": "A large herbivorous mammal with a trunk, long curved ivory tusks, and large ears",
+      "keyIdn": "Gajah",
+      "descriptionIdn": "Mamalia herbivora besar dengan belalai, gading melengkung panjang, dan telinga besar"
+    },
+    {
+      "keyEng": "Tomcat",
+      "descriptionEng": "A male cat",
+      "keyIdn": "Kucing Jantan",
+      "descriptionIdn": "Kucing jantan"
+    },
+    {
+      "keyEng": "Zucchini",
+      "descriptionEng": "A variety of summer squash that is shaped like a cucumber and that has a smooth, dark green skin",
+      "keyIdn": "Zukini",
+      "descriptionIdn": "Varietas labu musim panas yang berbentuk seperti mentimun dan memiliki kulit halus berwarna hijau tua"
+    },
+    {
+      "keyEng": "Jet",
+      "descriptionEng": "An aircraft powered by jet engines",
+      "keyIdn": "Jet",
+      "descriptionIdn": "Pesawat yang ditenagai oleh mesin jet"
+    },
+    {
+      "keyEng": "Zebra",
+      "descriptionEng": "An African wild horse with black-and-white stripes and an erect mane",
+      "keyIdn": "Zebra",
+      "descriptionIdn": "Kuda liar Afrika dengan garis-garis hitam-putih dan surai tegak"
+    },
+    {
+      "keyEng": "Table",
+      "descriptionEng": "A piece of furniture with a flat top and one or more legs, providing a level surface for eating, writing, or working",
+      "keyIdn": "Meja",
+      "descriptionIdn": "Perabot dengan bagian atas datar dan satu atau lebih kaki, menyediakan permukaan datar untuk makan, menulis, atau bekerja"
+    },
+    {
+      "keyEng": "Guitar",
+      "descriptionEng": "A stringed musical instrument, typically played by plucking or strumming the strings with the fingers or a plectrum",
+      "keyIdn": "Gitar",
+      "descriptionIdn": "Alat musik berdawai, biasanya dimainkan dengan memetik atau memetik dawai dengan jari atau plektrum"
+    },
+    {
+      "keyEng": "Sparrow",
+      "descriptionEng": "A small finch-like Old World bird related to the weaverbirds, typically with brown and gray plumage",
+      "keyIdn": "Burung Gereja",
+      "descriptionIdn": "Burung Dunia Lama kecil yang mirip dengan burung finch yang berkerabat dengan burung penenun, biasanya dengan bulu coklat dan abu-abu"
+    },
+    {
+      "keyEng": "Ice Cream Cone",
+      "descriptionEng": "A cone-shaped container made of a wafer, used to hold ice cream",
+      "keyIdn": "Kerucut Es Krim",
+      "descriptionIdn": "Wadah berbentuk kerucut yang terbuat dari wafer, digunakan untuk menampung es krim"
+    },
+    {
+      "keyEng": "Chocolate Chip Cookie",
+      "descriptionEng": "A cookie containing small pieces of chocolate",
+      "keyIdn": "Kue Cokelat Chip",
+      "descriptionIdn": "Kue yang mengandung potongan kecil cokelat"
+    },
+    {
+      "keyEng": "Peanut Butter Sandwich",
+      "descriptionEng": "A sandwich made with peanut butter spread between two slices of bread",
+      "keyIdn": "Sandwich Selai Kacang",
+      "descriptionIdn": "Sandwich yang dibuat dengan selai kacang di antara dua irisan roti"
+    },
+    {
+      "keyEng": "Grilled Cheese Sandwich",
+      "descriptionEng": "A sandwich made with cheese and grilled until the bread is toasted and the cheese is melted",
+      "keyIdn": "Sandwich Keju Panggang",
+      "descriptionIdn": "Sandwich yang dibuat dengan keju dan dipanggang sampai roti dipanggang dan keju meleleh"
+    },
+    {
+      "keyEng": "French Fries",
+      "descriptionEng": "Strips of deep-fried potato",
+      "keyIdn": "Kentang Goreng",
+      "descriptionIdn": "Irisan kentang yang digoreng"
+    },
+    {
+      "keyEng": "Chocolate Cake",
+      "descriptionEng": "A cake made with chocolate or cocoa powder",
+      "keyIdn": "Kue Cokelat",
+      "descriptionIdn": "Kue yang dibuat dengan cokelat atau bubuk kakao"
+    },
+    {
+      "keyEng": "Spaghetti Carbonara",
+      "descriptionEng": "An Italian pasta dish made with eggs, cheese, pancetta, and pepper",
+      "keyIdn": "Spaghetti Carbonara",
+      "descriptionIdn": "Hidangan pasta Italia yang dibuat dengan telur, keju, pancetta, dan lada"
+    },
+    {
+      "keyEng": "Chicken Noodle Soup",
+      "descriptionEng": "A soup made with chicken, noodles, and vegetables",
+      "keyIdn": "Sup Ayam Mie",
+      "descriptionIdn": "Sup yang dibuat dengan ayam, mie, dan sayuran"
+    },
+    {
+      "keyEng": "Caesar Salad",
+      "descriptionEng": "A salad made with romaine lettuce, croutons, Parmesan cheese, and Caesar dressing",
+      "keyIdn": "Salad Caesar",
+      "descriptionIdn": "Salad yang dibuat dengan selada romaine, crouton, keju Parmesan, dan saus Caesar"
+    },
+    {
+      "keyEng": "Mashed Potatoes",
+      "descriptionEng": "Potatoes that have been boiled and then mashed with milk, butter, and seasoning",
+      "keyIdn": "Kentang Tumbuk",
+      "descriptionIdn": "Kentang yang telah direbus dan kemudian ditumbuk dengan susu, mentega, dan bumbu"
+    },
+    {
+      "keyEng": "Chocolate Milkshake",
+      "descriptionEng": "A cold beverage made with milk, chocolate syrup, and ice cream",
+      "keyIdn": "Milkshake Cokelat",
+      "descriptionIdn": "Minuman dingin yang dibuat dengan susu, sirup cokelat, dan es krim"
+    },
+    {
+      "keyEng": "Blueberry Muffin",
+      "descriptionEng": "A small cake made with blueberries and baked in a cup-shaped mold",
+      "keyIdn": "Muffin Blueberry",
+      "descriptionIdn": "Kue kecil yang dibuat dengan blueberry dan dipanggang dalam cetakan berbentuk cangkir"
+    },
+    {
+      "keyEng": "Vegetable Stir Fry",
+      "descriptionEng": "A dish made by frying vegetables quickly over high heat",
+      "keyIdn": "Tumis Sayuran",
+      "descriptionIdn": "Hidangan yang dibuat dengan menggoreng sayuran dengan cepat di atas api besar"
+    },
+    {
+      "keyEng": "Beef Tacos",
+      "descriptionEng": "A Mexican dish consisting of a folded or rolled tortilla filled with beef and other ingredients",
+      "keyIdn": "Taco Daging Sapi",
+      "descriptionIdn": "Hidangan Meksiko yang terdiri dari tortilla yang dilipat atau digulung diisi dengan daging sapi dan bahan lainnya"
+    },
+    {
+      "keyEng": "Pineapple Pizza",
+      "descriptionEng": "A pizza topped with pineapple chunks and other ingredients",
+      "keyIdn": "Pizza Nanas",
+      "descriptionIdn": "Pizza yang diberi potongan nanas dan bahan lainnya"
+    },
+    {
+      "keyEng": "Shrimp Fried Rice",
+      "descriptionEng": "A dish made with rice, shrimp, and vegetables, stir-fried together",
+      "keyIdn": "Nasi Goreng Udang",
+      "descriptionIdn": "Hidangan yang dibuat dengan nasi, udang, dan sayuran, ditumis bersama"
+    },
+    {
+      "keyEng": "Beef Stroganoff",
+      "descriptionEng": "A Russian dish of sautéed pieces of beef served in a sauce with sour cream",
+      "keyIdn": "Beef Stroganoff",
+      "descriptionIdn": "Hidangan Rusia dari potongan daging sapi yang ditumis disajikan dalam saus dengan krim asam"
+    },
+    {
+      "keyEng": "Chicken Parmesan",
+      "descriptionEng": "A dish made with breaded chicken breast covered in tomato sauce and mozzarella cheese",
+      "keyIdn": "Ayam Parmesan",
+      "descriptionIdn": "Hidangan yang dibuat dengan dada ayam berlapis tepung roti yang ditutupi saus tomat dan keju mozzarella"
+    },
+    {
+      "keyEng": "Garlic Bread",
+      "descriptionEng": "Bread topped with garlic and olive oil or butter and baked",
+      "keyIdn": "Roti Bawang Putih",
+      "descriptionIdn": "Roti yang diberi bawang putih dan minyak zaitun atau mentega dan dipanggang"
+    },
+    {
+      "keyEng": "Fish and Chips",
+      "descriptionEng": "A dish of fried fish fillets served with deep-fried potato strips",
+      "keyIdn": "Ikan dan Kentang Goreng",
+      "descriptionIdn": "Hidangan fillet ikan goreng yang disajikan dengan irisan kentang goreng"
+    },
+    {
+      "keyEng": "Test Chocolate",
+      "descriptionEng": "Test Chocolate",
+      "keyIdn": "Test Chocolate",
+      "descriptionIdn": "Test Chocolate"
+    }
+  ]
+}
