@@ -1,6 +1,6 @@
 export enum Language {
-  BAHASA_INDONESIA = "IDN",
-  ENGLISH = "ENG",
+    BAHASA_INDONESIA = "IDN",
+    ENGLISH = "ENG",
 }
 
 export interface RawDictionaryDataInterface {

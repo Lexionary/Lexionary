@@ -1,6 +1,6 @@
 import type { DictionaryDataInterface, RawDictionaryDataInterface } from "@/types/dictionary";
 import { RedBlackTree } from "@/structures/red-black-tree";
-import { barrelRoll, blue, blur, flip, green, indigo, orange, purple, red, spin, yellow } from "@/helpers/gimmick";
+import { barrelRoll, blue, blur, flip, green, indigo, orange, purple, spin, yellow } from "@/helpers/gimmick";
 import dictionaryData from "@/assets/dictionary-data.json";
 
 const rawDictionaryData: RawDictionaryDataInterface[] = dictionaryData.data;
@@ -8,7 +8,12 @@ const rawDictionaryData: RawDictionaryDataInterface[] = dictionaryData.data;
 const EN_RBT: RedBlackTree = new RedBlackTree();
 const ID_RBT: RedBlackTree = new RedBlackTree();
 
-export const gimmickNodes: DictionaryDataInterface[] = [
+rawDictionaryData.forEach((rawDictionaryData: RawDictionaryDataInterface): void => {
+    EN_RBT.add(rawDictionaryData.keyEng, rawDictionaryData.descriptionEng, rawDictionaryData.keyIdn, rawDictionaryData.descriptionIdn);
+    ID_RBT.add(rawDictionaryData.keyIdn, rawDictionaryData.descriptionIdn, rawDictionaryData.keyEng, rawDictionaryData.descriptionEng);
+});
+
+const gimmickNodes: DictionaryDataInterface[] = [
     {
         keyEng: "Barrel Roll",
         descriptionEng: "Do a roll",
@@ -35,7 +40,15 @@ export const gimmickNodes: DictionaryDataInterface[] = [
         descriptionEng: "The color of passion and energy",
         keyIdn: "Merah",
         descriptionIdn: "Warna semangat dan energi",
-        gimmick: red,
+        gimmick: () => {
+            const app: HTMLElement = document.getElementById("app")!;
+
+            app.classList.add("red");
+
+            setTimeout(() => {
+                app.classList.remove("red");
+            }, 5000);
+        },
     },
     {
         keyEng: "Orange",
@@ -85,13 +98,8 @@ export const gimmickNodes: DictionaryDataInterface[] = [
         keyIdn: "Buram",
         descriptionIdn: "samar-samar",
         gimmick: blur,
-    }
+    },
 ];
-
-rawDictionaryData.forEach((rawDictionaryData: RawDictionaryDataInterface): void => {
-    EN_RBT.add(rawDictionaryData.keyEng, rawDictionaryData.descriptionEng, rawDictionaryData.keyIdn, rawDictionaryData.descriptionIdn);
-    ID_RBT.add(rawDictionaryData.keyIdn, rawDictionaryData.descriptionIdn, rawDictionaryData.keyEng, rawDictionaryData.descriptionEng);
-});
 
 gimmickNodes.forEach((node: DictionaryDataInterface): void => {
     EN_RBT.add(node.keyEng, node.descriptionEng, node.keyIdn, node.descriptionIdn, node.gimmick);

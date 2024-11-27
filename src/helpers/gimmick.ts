@@ -21,10 +21,6 @@ export function spin(): void {
     return classBasedAnimation("spin", 5000);
 }
 
-export function red(): void {
-    return classBasedAnimation("red", 5000);
-}
-
 export function orange(): void {
     return classBasedAnimation("orange", 5000);
 }
@@ -50,5 +46,5 @@ export function purple(): void {
 }
 
 export function blur(): void {
-  return classBasedAnimation("blur", 5000);
+    return classBasedAnimation("blur", 5000);
 }

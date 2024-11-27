@@ -1,5 +1,3 @@
-import { useDebouncedRef } from "@/composables/useDebouncedRef"
+import { useDebouncedRef } from "@/composables/useDebouncedRef";
 
-export {
-  useDebouncedRef,
-}
+export { useDebouncedRef };
