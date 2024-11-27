@@ -20,14 +20,14 @@ const gimmickNodes: DictionaryDataInterface[] = [
         keyIdn: "Muter Muter",
         descriptionIdn: "Muter muter gawe mumet, muter muter gawe mumet, muter ning ngawon, muter ning ngido, muter muter-muter gawe mumet...",
         gimmick: () => {
-          const app: HTMLElement = document.getElementById("app")!;
+            const app: HTMLElement = document.getElementById("app")!;
 
-          app.classList.add("barrel-roll");
+            app.classList.add("barrel-roll");
 
-          setTimeout(() => {
-              app.classList.remove("barrel-roll");
-          }, 5000);
-      },
+            setTimeout(() => {
+                app.classList.remove("barrel-roll");
+            }, 5000);
+        },
     },
     {
         keyEng: "Flip",
@@ -35,14 +35,14 @@ const gimmickNodes: DictionaryDataInterface[] = [
         keyIdn: "Muter Muter",
         descriptionIdn: "Muter muter",
         gimmick: () => {
-          const app: HTMLElement = document.getElementById("app")!;
+            const app: HTMLElement = document.getElementById("app")!;
 
-          app.classList.add("flip");
+            app.classList.add("flip");
 
-          setTimeout(() => {
-              app.classList.remove("flip");
-          }, 5000);
-      },
+            setTimeout(() => {
+                app.classList.remove("flip");
+            }, 5000);
+        },
     },
     {
         keyEng: "Spin",
@@ -50,14 +50,14 @@ const gimmickNodes: DictionaryDataInterface[] = [
         keyIdn: "Muter Muter",
         descriptionIdn: "Muter muter",
         gimmick: () => {
-          const app: HTMLElement = document.getElementById("app")!;
+            const app: HTMLElement = document.getElementById("app")!;
 
-          app.classList.add("spin");
+            app.classList.add("spin");
 
-          setTimeout(() => {
-              app.classList.remove("spin");
-          }, 5000);
-      },
+            setTimeout(() => {
+                app.classList.remove("spin");
+            }, 5000);
+        },
     },
     {
         keyEng: "Red",
@@ -80,14 +80,14 @@ const gimmickNodes: DictionaryDataInterface[] = [
         keyIdn: "Oranye",
         descriptionIdn: "Warna kegembiraan dan kreativitas",
         gimmick: () => {
-          const app: HTMLElement = document.getElementById("app")!;
+            const app: HTMLElement = document.getElementById("app")!;
 
-          app.classList.add("orange");
+            app.classList.add("orange");
 
-          setTimeout(() => {
-              app.classList.remove("orange");
-          }, 5000);
-      },
+            setTimeout(() => {
+                app.classList.remove("orange");
+            }, 5000);
+        },
     },
     {
         keyEng: "Yellow",
