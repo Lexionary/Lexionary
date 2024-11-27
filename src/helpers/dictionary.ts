@@ -9,16 +9,16 @@ const EN_RBT: RedBlackTree = new RedBlackTree();
 const ID_RBT: RedBlackTree = new RedBlackTree();
 
 rawDictionaryData.forEach((rawDictionaryData: RawDictionaryDataInterface): void => {
-    EN_RBT.add(rawDictionaryData.keyEng, rawDictionaryData.descriptionEng, rawDictionaryData.keyIdn, rawDictionaryData.descriptionIdn);
-    ID_RBT.add(rawDictionaryData.keyIdn, rawDictionaryData.descriptionIdn, rawDictionaryData.keyEng, rawDictionaryData.descriptionEng);
+    console.log(rawDictionaryData.keyEng, EN_RBT.add(rawDictionaryData.keyEng, rawDictionaryData.descriptionEng, rawDictionaryData.keyIdn, rawDictionaryData.descriptionIdn));
+    console.log(rawDictionaryData.keyIdn, ID_RBT.add(rawDictionaryData.keyIdn, rawDictionaryData.descriptionIdn, rawDictionaryData.keyEng, rawDictionaryData.descriptionEng));
 });
 
 const gimmickNodes: DictionaryDataInterface[] = [
     {
         keyEng: "Barrel Roll",
         descriptionEng: "Do a roll",
-        keyIdn: "Muter Muter",
-        descriptionIdn: "Muter muter gawe mumet, muter muter gawe mumet, muter ning ngawon, muter ning ngido, muter muter-muter gawe mumet...",
+        keyIdn: "Gulungan Barel",
+        descriptionIdn: "Gulung gulung",
         gimmick: () => {
             const app: HTMLElement = document.getElementById("app")!;
 
@@ -32,8 +32,8 @@ const gimmickNodes: DictionaryDataInterface[] = [
     {
         keyEng: "Flip",
         descriptionEng: "Do a flip",
-        keyIdn: "Muter Muter",
-        descriptionIdn: "Muter muter",
+        keyIdn: "Balik",
+        descriptionIdn: "Bolak balik",
         gimmick: () => {
             const app: HTMLElement = document.getElementById("app")!;
 
@@ -47,8 +47,8 @@ const gimmickNodes: DictionaryDataInterface[] = [
     {
         keyEng: "Spin",
         descriptionEng: "Do a spin",
-        keyIdn: "Muter Muter",
-        descriptionIdn: "Muter muter",
+        keyIdn: "Muter",
+        descriptionIdn: "Muter muter gawe mumet, muter muter gawe mumet, muter ning ngawon, muter ning ngido, muter muter-muter gawe mumet...",
         gimmick: () => {
             const app: HTMLElement = document.getElementById("app")!;
 
@@ -134,8 +134,11 @@ const gimmickNodes: DictionaryDataInterface[] = [
 ];
 
 gimmickNodes.forEach((node: DictionaryDataInterface): void => {
-    EN_RBT.add(node.keyEng, node.descriptionEng, node.keyIdn, node.descriptionIdn, node.gimmick);
-    ID_RBT.add(node.keyIdn, node.descriptionIdn, node.keyEng, node.descriptionEng, node.gimmick);
+    console.log(node.keyEng, EN_RBT.add(node.keyEng, node.descriptionEng, node.keyIdn, node.descriptionIdn, node.gimmick));
+    console.log(node.keyIdn, ID_RBT.add(node.keyIdn, node.descriptionIdn, node.keyEng, node.descriptionEng, node.gimmick));
 });
+
+console.log("EN RBT Total Nodes:", EN_RBT.getTotal());
+console.log("ID RBT Total Nodes:", ID_RBT.getTotal());
 
 export { EN_RBT, ID_RBT };
