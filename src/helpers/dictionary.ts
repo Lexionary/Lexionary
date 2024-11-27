@@ -1,6 +1,6 @@
 import type { DictionaryDataInterface, RawDictionaryDataInterface } from "@/types/dictionary";
 import { RedBlackTree } from "@/structures/red-black-tree";
-import { barrelRoll, blue, blur, flip, green, indigo, orange, purple, spin, yellow } from "@/helpers/gimmick";
+import { blue, blur, green, indigo, purple, yellow } from "@/helpers/gimmick";
 import dictionaryData from "@/assets/dictionary-data.json";
 
 const rawDictionaryData: RawDictionaryDataInterface[] = dictionaryData.data;

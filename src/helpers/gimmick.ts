@@ -9,22 +9,6 @@ function classBasedAnimation(className: string, duration: number): void {
     }, duration);
 }
 
-export function barrelRoll(): void {
-    return classBasedAnimation("barrel-roll", 5000);
-}
-
-export function flip(): void {
-    return classBasedAnimation("flip", 5000);
-}
-
-export function spin(): void {
-    return classBasedAnimation("spin", 5000);
-}
-
-export function orange(): void {
-    return classBasedAnimation("orange", 5000);
-}
-
 export function yellow(): void {
     return classBasedAnimation("yellow", 5000);
 }
