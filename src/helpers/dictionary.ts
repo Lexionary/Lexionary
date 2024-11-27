@@ -34,8 +34,15 @@ const gimmickNodes: DictionaryDataInterface[] = [
         descriptionEng: "Do a flip",
         keyIdn: "Muter Muter",
         descriptionIdn: "Muter muter",
-        gimmick: flip,
-    },
+        gimmick: () => {
+          const app: HTMLElement = document.getElementById("app")!;
+
+          app.classList.add("flip");
+
+          setTimeout(() => {
+              app.classList.remove("flip");
+          }, 5000);
+      },    },
     {
         keyEng: "Spin",
         descriptionEng: "Do a spin",
