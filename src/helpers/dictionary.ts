@@ -19,7 +19,15 @@ const gimmickNodes: DictionaryDataInterface[] = [
         descriptionEng: "Do a roll",
         keyIdn: "Muter Muter",
         descriptionIdn: "Muter muter gawe mumet, muter muter gawe mumet, muter ning ngawon, muter ning ngido, muter muter-muter gawe mumet...",
-        gimmick: barrelRoll,
+        gimmick: () => {
+          const app: HTMLElement = document.getElementById("app")!;
+
+          app.classList.add("barrel-roll");
+
+          setTimeout(() => {
+              app.classList.remove("barrel-roll");
+          }, 5000);
+      },
     },
     {
         keyEng: "Flip",
