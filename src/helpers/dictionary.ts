@@ -42,7 +42,8 @@ const gimmickNodes: DictionaryDataInterface[] = [
           setTimeout(() => {
               app.classList.remove("flip");
           }, 5000);
-      },    },
+      },
+    },
     {
         keyEng: "Spin",
         descriptionEng: "Do a spin",
@@ -56,7 +57,8 @@ const gimmickNodes: DictionaryDataInterface[] = [
           setTimeout(() => {
               app.classList.remove("spin");
           }, 5000);
-      },    },
+      },
+    },
     {
         keyEng: "Red",
         descriptionEng: "The color of passion and energy",
@@ -77,7 +79,15 @@ const gimmickNodes: DictionaryDataInterface[] = [
         descriptionEng: "The color of joy and creativity",
         keyIdn: "Oranye",
         descriptionIdn: "Warna kegembiraan dan kreativitas",
-        gimmick: orange,
+        gimmick: () => {
+          const app: HTMLElement = document.getElementById("app")!;
+
+          app.classList.add("orange");
+
+          setTimeout(() => {
+              app.classList.remove("orange");
+          }, 5000);
+      },
     },
     {
         keyEng: "Yellow",
