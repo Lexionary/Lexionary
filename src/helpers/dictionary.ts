@@ -124,7 +124,15 @@ const gimmickNodes: DictionaryDataInterface[] = [
         descriptionEng: "The color of calm and serenity",
         keyIdn: "Biru",
         descriptionIdn: "Warna ketenangan dan kedamaian",
-        gimmick: blue,
+        gimmick: () => {
+            const app : HTMLElement = document.getElementById("blue");
+
+            app.classList.add("blue");
+
+            setTimeout(() => {
+                app.classList.remove("blue");
+            }, 5000);
+        },
     },
     {
         keyEng: "Indigo",
