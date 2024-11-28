@@ -110,7 +110,7 @@ const gimmickNodes: DictionaryDataInterface[] = [
         keyIdn: "Hijau",
         descriptionIdn: "Warna alam dan ketenangan",
         gimmick: ()=> {
-            const app : HTMLElement = document.getElementById("green")!;
+            const app : HTMLElement = document.getElementById("app")!;
 
             app.classList.add("green");
 
@@ -125,7 +125,7 @@ const gimmickNodes: DictionaryDataInterface[] = [
         keyIdn: "Biru",
         descriptionIdn: "Warna ketenangan dan kedamaian",
         gimmick: () => {
-            const app : HTMLElement = document.getElementById("blue");
+            const app : HTMLElement = document.getElementById("app")!;
 
             app.classList.add("blue");
 
