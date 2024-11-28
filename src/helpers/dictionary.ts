@@ -94,7 +94,15 @@ const gimmickNodes: DictionaryDataInterface[] = [
         descriptionEng: "The color of sunshine and happiness",
         keyIdn: "Kuning",
         descriptionIdn: "Warna sinar matahari dan kebahagiaan",
-        gimmick: yellow,
+        gimmick: () => {
+            const app: HTMLElement = document.getElementById("app")!;
+
+            app.classList.add("yellow");
+
+            setTimeout(() => {
+                app.classList.remove("yellow");
+            }, 5000);
+        },
     },
     {
         keyEng: "Green",
