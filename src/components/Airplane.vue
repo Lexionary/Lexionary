@@ -67,6 +67,8 @@ export default {
     left: 65%;
 
     transform: translateY(-50%);
+
+    animation: lower 5s linear infinite;
 }
 
 @keyframes fly {
@@ -76,15 +78,25 @@ export default {
         transform: translateY(-50%) rotate(0deg);
     }
     50% {
-        top: 40%;
-
         transform: translateY(-50%) rotate(-20deg);
     }
     100% {
         left: 100%;
-        top: 10%;
+        top: 50%;
 
         transform: translateY(-50%) rotate(20deg);
+    }
+}
+
+@keyframes lower {
+    0% {
+        bottom: -45%;
+    }
+    65% {
+        bottom: -45%;
+    }
+    100% {
+        bottom: -300%;
     }
 }
 </style>
