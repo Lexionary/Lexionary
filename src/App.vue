@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from "vue";
+import { computed, ref, watch, type DefineComponent } from "vue";
 
 import { useDebouncedRef } from "@/composables";
 import { Node, RedBlackTree } from "@/structures/red-black-tree";
@@ -23,14 +23,18 @@ const searchQuery = useDebouncedRef<string>("", 200);
 const activeRBT = computed<RedBlackTree>(() => (selectedLanguage.value === Language.BAHASA_INDONESIA ? ID_RBT : EN_RBT));
 const result = computed<Node[]>(() => activeRBT.value.getNodesBySimiliarity(searchQuery.value));
 
-const lastResultGimmick = computed<(() => void) | null>(() => result.value[0]?.gimmick);
-watch(lastResultGimmick, (gimmick: (() => void) | null) => {
+const lastResultGimmick = computed<(() => any) | null>(() => result.value[0]?.gimmick);
+
+const activeGimmickComponent = ref<string | DefineComponent>("div");
+watch(lastResultGimmick, async (gimmick: (() => any) | null) => {
+    activeGimmickComponent.value = "div";
+
     if (!gimmick) {
         return;
     }
 
     const debouncedGimmick = debounce(gimmick, 1000);
-    debouncedGimmick();
+    activeGimmickComponent.value = await debouncedGimmick();
 });
 </script>
 
@@ -44,7 +48,6 @@ watch(lastResultGimmick, (gimmick: (() => void) | null) => {
     <main class="container mx-auto pt-24 pb-12 px-2 md:px-4">
         <section class="text-center">
             <h1 class="text-4xl">Lexionary</h1>
-            <!-- Ganti taglinenya nanti -->
             <p class="mt-3">Find your lexical needs (tentative).</p>
 
             <div class="mt-8">
@@ -57,6 +60,8 @@ watch(lastResultGimmick, (gimmick: (() => void) | null) => {
                 </div>
             </div>
         </section>
+
+        <component :is="activeGimmickComponent"></component>
 
         <section v-if="searchQuery" class="mt-4 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
             <div v-for="item in result" :key="item.key" class="px-4 py-2 border shadow rounded-xl" :class="darkMode ? 'bg-neutral-900' : 'bg-white'">

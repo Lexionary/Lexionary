@@ -24,13 +24,13 @@ export class Node {
     private _description: string;
     private _keyTranslated: string;
     private _descriptionTranslated: string;
-    private _gimmick: (() => void) | null;
+    private _gimmick: (() => any) | null;
     private _color: Color;
     private _parent: Node | null = null;
     private _left: Node | null = null;
     private _right: Node | null = null;
 
-    public constructor(key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: (() => void) | null, color: Color, parent: Node | null) {
+    public constructor(key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: (() => any) | null, color: Color, parent: Node | null) {
         this._key = key;
         this._description = description;
         this._keyTranslated = keyTranslated;
@@ -72,11 +72,11 @@ export class Node {
         this._descriptionTranslated = value;
     }
 
-    public get gimmick(): (() => void) | null {
+    public get gimmick(): (() => any) | null {
         return this._gimmick;
     }
 
-    public set gimmick(value: (() => void) | null) {
+    public set gimmick(value: (() => any) | null) {
         this._gimmick = value;
     }
 
@@ -381,7 +381,7 @@ export class RedBlackTree {
         return this.isExistRecursively(currentNode.right, key);
     }
 
-    public add(key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: (() => void) | null = null): boolean {
+    public add(key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: (() => any) | null = null): boolean {
         if (this.isExist(key)) {
             return false;
         }
@@ -433,7 +433,7 @@ export class RedBlackTree {
         return true;
     }
 
-    private addNode(node: Node, key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: (() => void) | null): Node {
+    private addNode(node: Node, key: string, description: string, keyTranslated: string, descriptionTranslated: string, gimmick: (() => any) | null): Node {
         let newNode: Node;
 
         while (true) {

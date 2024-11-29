@@ -12,5 +12,5 @@ export interface RawDictionaryDataInterface {
 }
 
 export interface DictionaryDataInterface extends RawDictionaryDataInterface {
-    gimmick?: (() => void) | null;
+    gimmick?: (() => any) | null;
 }

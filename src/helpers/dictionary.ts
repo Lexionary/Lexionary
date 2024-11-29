@@ -1,7 +1,8 @@
 import type { DictionaryDataInterface, RawDictionaryDataInterface } from "@/types/dictionary";
 import { RedBlackTree } from "@/structures/red-black-tree";
-import { blue, blur, green, indigo, purple, yellow } from "@/helpers/gimmick";
+import { blur, indigo, purple } from "@/helpers/gimmick";
 import dictionaryData from "@/assets/dictionary-data.json";
+import Airplane from "@/components/Airplane.vue";
 
 const rawDictionaryData: RawDictionaryDataInterface[] = dictionaryData.data;
 
@@ -14,6 +15,15 @@ rawDictionaryData.forEach((rawDictionaryData: RawDictionaryDataInterface): void 
 });
 
 const gimmickNodes: DictionaryDataInterface[] = [
+    {
+        keyEng: "Airplane",
+        descriptionEng: "A powered flying vehicle with fixed wings and a weight greater than that of the air it displaces",
+        keyIdn: "Pesawat Terbang",
+        descriptionIdn: "Kendaraan terbang yang bertenaga dengan sayap tetap dan berat lebih besar dari udara yang dipindahkannya, digunakan untuk mengangkut orang atau barang",
+        gimmick: () => {
+            return Airplane;
+        },
+    },
     {
         keyEng: "Barrel Roll",
         descriptionEng: "Do a roll",
@@ -109,8 +119,8 @@ const gimmickNodes: DictionaryDataInterface[] = [
         descriptionEng: "The color of nature and tranquility",
         keyIdn: "Hijau",
         descriptionIdn: "Warna alam dan ketenangan",
-        gimmick: ()=> {
-            const app : HTMLElement = document.getElementById("app")!;
+        gimmick: () => {
+            const app: HTMLElement = document.getElementById("app")!;
 
             app.classList.add("green");
 
@@ -125,7 +135,7 @@ const gimmickNodes: DictionaryDataInterface[] = [
         keyIdn: "Biru",
         descriptionIdn: "Warna ketenangan dan kedamaian",
         gimmick: () => {
-            const app : HTMLElement = document.getElementById("app")!;
+            const app: HTMLElement = document.getElementById("app")!;
 
             app.classList.add("blue");
 
