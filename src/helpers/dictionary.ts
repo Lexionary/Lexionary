@@ -4,16 +4,20 @@ import { blur, indigo, purple } from "@/helpers/gimmick";
 import dictionaryData from "@/assets/dictionary-data.json";
 import Airplane from "@/components/Airplane.vue";
 
+// Data Mentah
 const rawDictionaryData: RawDictionaryDataInterface[] = dictionaryData.data;
 
+// Inisiasi Red Black Tree (EN & ID)
 const EN_RBT: RedBlackTree = new RedBlackTree();
 const ID_RBT: RedBlackTree = new RedBlackTree();
 
+// Memasukkan Data Mentah Ke Dalam Red Black Tree
 rawDictionaryData.forEach((rawDictionaryData: RawDictionaryDataInterface): void => {
     console.log(rawDictionaryData.keyEng, EN_RBT.add(rawDictionaryData.keyEng, rawDictionaryData.descriptionEng, rawDictionaryData.keyIdn, rawDictionaryData.descriptionIdn));
     console.log(rawDictionaryData.keyIdn, ID_RBT.add(rawDictionaryData.keyIdn, rawDictionaryData.descriptionIdn, rawDictionaryData.keyEng, rawDictionaryData.descriptionEng));
 });
 
+// Data Mentah Dengan Fungsi Gimmick
 const gimmickNodes: DictionaryDataInterface[] = [
     {
         keyEng: "Airplane",
@@ -167,11 +171,13 @@ const gimmickNodes: DictionaryDataInterface[] = [
     },
 ];
 
+// Memasukkan Data Mentah Dengan Fungsi Gimmick Ke Dalam Red Black Tree
 gimmickNodes.forEach((node: DictionaryDataInterface): void => {
     console.log(node.keyEng, EN_RBT.add(node.keyEng, node.descriptionEng, node.keyIdn, node.descriptionIdn, node.gimmick));
     console.log(node.keyIdn, ID_RBT.add(node.keyIdn, node.descriptionIdn, node.keyEng, node.descriptionEng, node.gimmick));
 });
 
+// Menampilkan Total Nodes Pada Red Black Tree
 console.log("EN RBT Total Nodes:", EN_RBT.getTotal());
 console.log("ID RBT Total Nodes:", ID_RBT.getTotal());
 

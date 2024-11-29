@@ -9,18 +9,6 @@ function classBasedAnimation(className: string, duration: number): void {
     }, duration);
 }
 
-export function yellow(): void {
-    return classBasedAnimation("yellow", 5000);
-}
-
-export function green(): void {
-    return classBasedAnimation("green", 5000);
-}
-
-export function blue(): void {
-    return classBasedAnimation("blue", 5000);
-}
-
 export function indigo(): void {
     return classBasedAnimation("indigo", 5000);
 }
