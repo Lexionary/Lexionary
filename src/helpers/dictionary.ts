@@ -168,7 +168,15 @@ const gimmickNodes: DictionaryDataInterface[] = [
         descriptionEng: "The color of royalty and luxury",
         keyIdn: "Ungu",
         descriptionIdn: "Warna kerajaan dan kemewahan",
-        gimmick: purple,
+        gimmick: () => {
+          const app: HTMLElement = document.getElementById("app")!;
+
+          app.classList.add("purple");
+
+          setTimeout(() => {
+              app.classList.remove("pruple");
+          }, 5000);
+      },
     },
     {
         keyEng: "Blur",
