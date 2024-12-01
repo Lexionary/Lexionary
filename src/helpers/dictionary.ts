@@ -183,7 +183,15 @@ const gimmickNodes: DictionaryDataInterface[] = [
         descriptionEng: "blur the screen",
         keyIdn: "Buram",
         descriptionIdn: "samar-samar",
-        gimmick: blur,
+        gimmick: () => {
+          const app: HTMLElement = document.getElementById("app")!;
+
+          app.classList.add("blur");
+
+          setTimeout(() => {
+              app.classList.remove("blur");
+          }, 5000);
+      },
     },
 ];
 
