@@ -153,7 +153,15 @@ const gimmickNodes: DictionaryDataInterface[] = [
         descriptionEng: "The color of intuition and perception",
         keyIdn: "Nila",
         descriptionIdn: "Warna intuisi dan persepsi",
-        gimmick: indigo,
+        gimmick: () => {
+          const app: HTMLElement = document.getElementById("app")!;
+
+          app.classList.add("indigo");
+
+          setTimeout(() => {
+              app.classList.remove("indigo");
+          }, 5000);
+      },
     },
     {
         keyEng: "Purple",
