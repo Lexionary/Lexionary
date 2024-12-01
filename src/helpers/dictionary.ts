@@ -1,6 +1,5 @@
 import type { DictionaryDataInterface, RawDictionaryDataInterface } from "@/types/dictionary";
 import { RedBlackTree } from "@/structures/red-black-tree";
-import { blur, indigo, purple } from "@/helpers/gimmick";
 import dictionaryData from "@/assets/dictionary-data.json";
 import Airplane from "@/components/Airplane.vue";
 
