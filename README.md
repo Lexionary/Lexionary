@@ -1,39 +1,50 @@
-# lexionary
+# Lexionary
 
-This template should help get you started developing with Vue 3 in Vite.
+<p style="text-align: justify">
+    <b>Lexionary</b> is a web application created as a final project for a university course called <b>Data Structure</b>. Built with modern web technologies, this project demonstrates the practical application of data structures in a real-world scenario. Whether you're here to explore the codebase or understand the underlying algorithms, we hope you find this project insightful.
+</p>
 
-## Recommended IDE Setup
+## Tech Stack
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+![PrimeVue](https://img.shields.io/badge/PrimeVue-%2342b883.svg?style=for-the-badge&logo=vue.js&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![PNPM](https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=for-the-badge&logo=pnpm&logoColor=f69220)
 
-## Type Support for `.vue` Imports in TS
+<br>
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Development Setup
 
-## Customize configuration
+### 1. Install Dependencies
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
+```bash
+$ pnpm install
 ```
 
-### Compile and Hot-Reload for Development
+### 2. Running The Project
 
-```sh
-pnpm dev
+```bash
+$ pnpm dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## Production Setup
 
-```sh
-pnpm build
+### 1. Install Dependencies
+
+```bash
+$ pnpm install
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### 2. Building The Project
 
-```sh
-pnpm lint
+```bash
+$ pnpm build
+```
+
+### 3. Running The Project
+
+```bash
+$ pnpm preview
 ```
