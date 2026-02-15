@@ -26,7 +26,7 @@ $ pnpm install
 ### 2. Running The Project
 
 ```bash
-$ pnpm dev
+$ pnpm run dev
 ```
 
 ## Production Setup
@@ -40,11 +40,11 @@ $ pnpm install
 ### 2. Building The Project
 
 ```bash
-$ pnpm build
+$ pnpm run build
 ```
 
 ### 3. Running The Project
 
 ```bash
-$ pnpm preview
+$ pnpm run preview
 ```
